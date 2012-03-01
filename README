@@ -1,0 +1,34 @@
+This repository is a general set of tools for parsing and analyzing NBA play-by-play data;
+methods are primarly those from 82games.com and basketballvalue.com, among others; data is 
+primarily obtained from basketballvalue.com, though apparently espn has all of the data 
+available online as well; 
+
+###########################################################################################
+Use:
+
+The NBA_runparse.py used to (yesterday, before I started changing stuff around and adding
+a player and game class to track data over a season) run the play-by-play parsing for a 
+single game, obtaining the typical set of game stats (except for minutes played.  I still
+need to create that module.  Also, I need to add a module for tracking who is on the court
+at a given time.  This would be trivial if the play-by-play listed the starting 5, but no).  
+In other words, there is no way to run the code in the manner intended at the moment.
+
+
+###########################################################################################
+General Resources:
+
+data downloads:
+http://basketballvalue.com/downloads.php
+
+espn play-by-play w/ shot distance:   # not quite the correct form for this...
+http://sports.espn.go.com/nba/gamepackage/data/shot?gameId=
+
+phpbb:
+http://apbr.org/metrics/
+
+mit sloan bb papers:
+http://www.sloansportsconference.com/?page_id=462
+
+82Games.com
+http://82games.com/index.htm
+http://www.82games.com/comm30.htm
