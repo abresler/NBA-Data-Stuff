@@ -346,18 +346,50 @@ def _updatestats(players, stats, args, playerid, stats_array):
         _updatestat(players[i], stats[i], args[i], playerid, stats_array)
 
 
-def _updatestat(player, stat, arg, stats):
-
-    try:
-        val = stats[player].updatestat(stat, arg)
-        if val==-1:
+def _updatestat(player, stat, args, playerid, stats_array):
+    
+    if stat.lower() in stats:
+        if stat.lower() in reqargs and args==None:
             raise AttributeError, 'this stat requires an argument: ' + stat
-        elif val==-2:
-            raise ValueError, 'stat "%s" not a player stat' % stat
-    except AttributeError:
-        raise AttributeError, '%s is not a valid player name' % player
-        
-   
+        #-1
+        else:
+            index = playerid[player]
+            if stat=='PTS':
+                stats_array[index][stats.index('pts')] += args
+            elif stat=='FG':
+                stats_array[index][stats.index('fga')] += 1
+                if args=='Made':
+                    stats_array[index][stats.index('fg')] += 1
+            elif stat=='3PT':
+                stats_array[index][stats.index('3pta')] += 1
+                if args=='Made':
+                    stats_array[index][stats.index('3pt')] += 1
+            elif stat=='FT':
+                stats_array[index][stats.index('fta')] += 1
+                if args=='Made':
+                    stats_array[index][stats.index('ft')] += 1
+            elif stat=='STL':
+                stats_array[index][stats.index('stl')] += 1
+            elif stat=='AST':
+                stats_array[index][stats.index('ast')] += 1
+            elif stat=='BLK':
+                stats_array[index][stats.index('blk')] += 1  
+            elif stat=='TO':
+                stats_array[index][stats.index('to')] += 1
+            elif stat=='PF':
+                stats_array[index][stats.index('pf')] += 1
+            elif stat=='RB':
+                args = args.split()
+                args = [arg.split(":") for arg in args]
+                stats_array[index][stats.index('rbo')] = int(args[2][0])
+                stats_array[index][stats.index('rbd')] = int(args[5][0])
+                stats_array[index][stats.index('rb')] = \
+                                       int(args[2][0]) + int(args[5][0])
+    else:
+        raise ValueError, 'stat "%s" not a player stat' % stat
+    #-2
+    
+
 def loadfile(fhandle):
     '''Load the desired data file; return error if file does not exist'''
     if os.path.isfile(fhandle):

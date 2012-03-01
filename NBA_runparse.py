@@ -1,9 +1,5 @@
 import os, sys
 import NBA_parseplaybyplay as NBA1
-import NBAplaybyplay_sandbox as NBA2
-##global teams
-##global players
-##global stats_array
 
 chdir = os.getcwd()
 
@@ -28,8 +24,6 @@ stats_array = []
 for i in range(count):
     stats_array.append([0.0 for j in range(len(stats))])
 '''Process play-by-play for game "gameID"'''
-playbyplay = NBA1.loadfile(fhandlepbp)
-gameIDdict = NBA1._getgamelines(playbyplay)
 sub = playbyplay[gameIDdict[gameID][0]:gameIDdict[gameID][1]]
 actions = NBA1._getactions(sub, playbyplay[0])
 stats_array, gamescore = NBA2.processgameactions(actions, playerid,
@@ -37,9 +31,10 @@ stats_array, gamescore = NBA2.processgameactions(actions, playerid,
                                       playerteamdict)
 
 with open(os.path.join(chdir, "outputstats.txt"), 'w') as f1:
-    f1.write('names\tteam\t' + '\t'.join(stats) + '\n')
+    f1.write('names\tid\tteam\t' + '\t'.join(stats) + '\n')
     for i,line in enumerate(stats_array):
         f1.write(playerid.keys()[i] + '\t' + \
+                 playerIDdict[playerid.keys()[i]] + '\t' + \
                  playerteamdict[playerid.keys()[i]] + '\t' + \
                  '\t'.join(str(e) for e in line) + '\n')
     f1.write('\n')
