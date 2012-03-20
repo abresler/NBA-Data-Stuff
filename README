@@ -6,6 +6,25 @@ available online as well;
 ###########################################################################################
 Use:
 
+20/03/12 Update:
+Starting to make changes for interfacing w/ a local MySQL database.  Also, going to extend
+the "player" class to account for "player actions", i.e. time-stamped game actions.  Players
+will be provided with a unique ID for each game they participate in.  These will be linked
+back to a "global" player ID for tracking over season / life (need to check into ESPN's
+ID assignment for players; I'm sure they have unique codings, and it would be reasonable
+to use these, for obvious reasons).  This, I think, will reduce the effort required for 
+more in-depth stat and performance analysis.  The database for the NBA data will consist 
+of 5 main tables initially, with other possible additions:
+a)
+
+b)
+
+c)
+
+d)
+
+e)
+
 02/03/12 Update:
 Just finished with some changes to the code, and it's up and running w/ a new 'player' and
 'game' class to carry around / organize data while parsing the play-by-play (will upload
