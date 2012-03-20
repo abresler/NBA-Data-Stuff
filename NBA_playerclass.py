@@ -145,6 +145,8 @@ class player():
                     self.stats['rbo']  = int(args[2][0])
                     self.stats['rbd']  = int(args[5][0])
                     self.stats['rb']   = int(args[2][0]) + int(args[5][0])
+                elif stat=='MINS':
+                    self.stats['mins'] += args
                 return 1
         else:
             return -2
