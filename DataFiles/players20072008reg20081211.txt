@@ -1,0 +1,734 @@
+PlayerID	PlayerName	PlayerTrueName	League	TeamName3	Year	Comment	StartDate	EndDate
+1	Jo. Howard	Howard, Josh	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+2	Thomas	Thomas, Kurt	NBA	SAS	2007-2008	Trade	2008-02-20	2008-07-01
+2	K. Thomas	Thomas, Kurt	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-02-20
+2	Thomas	Thomas, Kurt	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-02-20
+3	Dampier	Dampier, Erick	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+4	Marion	Marion, Shawn	NBA	MIA	2007-2008	20080210LALMIA	2008-02-06	2008-07-01
+4	Marion	Marion, Shawn	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-02-06
+5	Nowitzki	Nowitzki, Dirk	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+6	Terry	Terry, Jason	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+7	R. Bell	Bell, Raja	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+7	Bell	Bell, Raja	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+8	Nash	Nash, Steve	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+10	Jones	Jones, James	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+10	Ja. Jones	Jones, James	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+10	J. Jones	Jones, James	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+11	Van Horn	Van Horn, Keith	NBA	NJN	2007-2008	Trade	2008-02-19	2008-07-01
+12	Diaw	Diaw, Boris	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+14	Daniels	Daniels, Marquis	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+14	M. Daniels	Daniels, Marquis	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+15	Harris	Harris, Devin	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+15	Harris	Harris, Devin	NBA	NJN	2007-2008	Trade	2008-02-19	2008-07-01
+15	D. Harris	Harris, Devin	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+16	Barbosa	Barbosa, Leandro	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+17	Diop	Diop, DeSagana	NBA	NJN	2007-2008	Trade	2008-02-19	2008-07-01
+17	Diop	Diop, DeSagana	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+19	Armstrong	Armstrong, Darrell	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+20	House	House, Eddie	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+21	Martin	Martin, Kenyon	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+21	K. Martin	Martin, Kenyon	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+22	Nesterovic	Nesterovic, Rasho	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+23	Camby	Camby, Marcus	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+24	Ginobili	Ginobili, Manu	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+25	Anthony	Anthony, Carmelo	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+26	Duncan	Duncan, Tim	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+28	B. Bowen	Bowen, Bruce	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+28	Bowen	Bowen, Bruce	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+29	Finley	Finley, Michael	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+30	W. Parker	Parker, Tony	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+30	T. Parker	Parker, Tony	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+30	Parker	Parker, Tony	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+31	A. Miller	Miller, Andre	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+31	Miller	Miller, Andre	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+32	Horry	Horry, Robert	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+33	Barry	Barry, Brent	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+34	Hilario	Hilario, Nene	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+34	Nene	Hilario, Nene	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+35	Boykins	Boykins, Earl	NBA	CHA	2007-2008	20080201CHAGSW	2008-01-31	2008-07-01
+36	Najera	Najera, Eduardo	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+37	Oberto	Oberto, Fabricio	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+39	Buckner	Buckner, Greg	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+40	Mohammed	Mohammed, Nazr	NBA	DET	2007-2008	Season Start	2007-10-29	2007-12-14
+40	Mohammed	Mohammed, Nazr	NBA	CHA	2007-2008	20071215CHAATL	2007-12-14	2008-07-01
+41	Johnson	Johnson, DerMarr	NBA	SAS	2007-2008	20071230MEMSAS	2007-12-30	2008-07-01
+42	Elson	Elson, Francisco	NBA	SEA	2007-2008	Trade	2008-02-20	2008-07-01
+42	Elson	Elson, Francisco	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-02-20
+44	Webber	Webber, Chris	NBA	GSW	2007-2008	20080207CHIGSW	2008-02-07	2008-07-01
+45	Redd	Redd, Michael	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+46	Iverson	Iverson, Allen	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+47	T. Ford	Ford, T.J.	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+47	Ford	Ford, T.J.	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+48	Simmons	Simmons, Bobby	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+49	Bogut	Bogut, Andrew	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+50	Hunter	Hunter, Steven	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+50	S. Hunter	Hunter, Steven	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+51	Magloire	Magloire, Jamaal	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-03-03
+51	Magloire	Magloire, Jamaal	NBA	DAL	2007-2008	20080303DALUTA	2008-03-03	2008-07-01
+52	Iguodala	Iguodala, Andre	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+54	Korver	Korver, Kyle	NBA	PHI	2007-2008	Season Start	2007-10-29	2007-12-29
+54	Korver	Korver, Kyle	NBA	UTA	2007-2008	20071231PORUTA	2007-12-29	2008-07-01
+55	Williams	Williams, Mo	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+55	M. Williams	Williams, Mo	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+56	Gadzuric	Gadzuric, Dan	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+59	Salmons	Salmons, John	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+60	C. Bell	Bell, Charlie	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+60	Bell	Bell, Charlie	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+61	Ollie	Ollie, Kevin	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+62	Wells	Wells, Bonzi	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-02-21
+62	Wells	Wells, Bonzi	NBA	NOH	2007-2008	Trade	2008-02-21	2008-07-01
+63	E. Smith	Smith, J.R.	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+63	Smith	Smith, J.R.	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+64	Abdur-Rahim	Abdur-Rahim, Shareef	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+65	Miller	Miller, Brad	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+65	B. Miller	Miller, Brad	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+66	Brown	Brown, Collier (P.J.)	NBA	BOS	2007-2008	20080307CHIBOS	2008-02-27	2008-07-01
+67	Stojakovic	Stojakovic, Peja	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+68	Bibby	Bibby, Mike	NBA	ATL	2007-2008	Trade	2008-02-16	2008-07-01
+68	Bibby	Bibby, Mike	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-02-16
+68	M. Bibby	Bibby, Mike	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-02-16
+69	D. West	West, David	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+69	West	West, David	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+70	Paul	Paul, Chris	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+71	Nachbar	Nachbar, Bostjan	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+72	Claxton	Claxton, Speedy	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+73	Andersen	Andersen, Chris	NBA	NOH	2007-2008	20080325NOHIND	2008-03-05	2008-07-01
+74	Thomas	Thomas, Kenny	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+74	K. Thomas	Thomas, Kenny	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+75	Hart	Hart, Jason	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+76	R. Butler	Butler, Rasual	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+76	Butler	Butler, Rasual	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+77	K. Martin	Martin, Kevin	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+77	Martin	Martin, Kevin	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+78	Skinner	Skinner, Brian	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+79	Mason	Mason, Desmond	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+80	Garcia	Garcia, Francisco	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+83	Bass	Bass, Brandon	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+85	Price	Price, Ronnie	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+86	J. Johnson	Johnson, Joe	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+87	B. Davis	Davis, Baron	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+87	Davis	Davis, Baron	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+88	Pachulia	Pachulia, Zaza	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+89	Murphy	Murphy, Troy	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+90	J. Richardson	Richardson, Jason	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+90	Richardson	Richardson, Jason	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+91	Childress	Childress, Josh	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+92	Dunleavy	Dunleavy, Mike	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+93	Foyle	Foyle, Adonal	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+94	Smith	Smith, Josh	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+94	J. Smith	Smith, Josh	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+95	Harrington	Harrington, Al	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+96	Lue	Lue, Tyronn	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-02-16
+96	Lue	Lue, Tyronn	NBA	SAC	2007-2008	Trade	2008-02-16	2008-02-29
+96	Lue	Lue, Tyronn	NBA	DAL	2007-2008	20080312CHADAL	2008-03-04	2008-07-01
+97	M. Williams	Williams, Marvin	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+98	Pietrus	Pietrus, Mickael	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+100	C. Stoudamire	Stoudamire, Salim	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+100	Stoudamire	Stoudamire, Salim	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+100	S. Stoudamire	Stoudamire, Salim	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+101	Biedrins	Biedrins, Andris	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+103	Fisher	Fisher, Derek	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+109	Ivey	Ivey, Royal	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+110	Hinrich	Hinrich, Kirk	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+111	Wallace	Wallace, Gerald	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+111	G. Wallace	Wallace, Gerald	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+112	Nocioni	Nocioni, Andres	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+113	Duhon	Duhon, Chris	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+114	Knight	Knight, Brevin	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+115	Brezec	Brezec, Primoz	NBA	TOR	2007-2008	Trade	2008-02-21	2008-07-01
+115	Brezec	Brezec, Primoz	NBA	CHA	2007-2008	Season Start	2007-10-29	2007-12-14
+115	Brezec	Brezec, Primoz	NBA	DET	2007-2008	20071216GSWDET	2007-12-14	2008-02-21
+116	Rush	Rush, Kareem	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+117	Okafor	Okafor, Emeka	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+118	Chandler	Chandler, Tyson	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+119	Gordon	Gordon, Ben	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+121	Songaila	Songaila, Darius	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+122	Deng	Deng, Luol	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+123	Ely	Ely, Melvin	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+124	O. Harrington	Harrington, Othella	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+124	Harrington	Harrington, Othella	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+125	Thomas	Thomas, Tim	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+125	T. Thomas	Thomas, Tim	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+126	Felton	Felton, Raymond	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+127	May	May, Sean	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+128	Carroll	Carroll, Matt	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+130	Allen	Allen, Malik	NBA	DAL	2007-2008	Trade	2008-02-19	2008-07-01
+130	M. Allen	Allen, Malik	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-19
+130	Allen	Allen, Malik	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-19
+131	Piatkowski	Piatkowski, Eric	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+132	Okur	Okur, Mehmet	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+133	Giricek	Giricek, Gordan	NBA	UTA	2007-2008	Season Start	2007-10-29	2007-12-29
+133	Giricek	Giricek, Gordan	NBA	PHI	2007-2008	Trade	2007-12-29	2008-02-29
+133	Giricek	Giricek, Gordan	NBA	PHX	2007-2008	20080304PHXPOR	2008-03-04	2008-07-01
+136	Kirilenko	Kirilenko, Andrei	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+137	Collins	Collins, Jarron	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+137	J. Collins	Collins, Jarron	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+138	Harpring	Harpring, Matt	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+139	Williams	Williams, Deron	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+139	D. Williams	Williams, Deron	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+140	D. Brown	Brown, Devin	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+141	Humphries	Humphries, Kris	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+143	J. O'Neal	O'Neal, Jermaine	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+143	O'Neal	O'Neal, Jermaine	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+144	Battie	Battie, Tony	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+145	Artest	Artest, Ron	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+146	Francis	Francis, Steve	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+147	Jackson	Jackson, Stephen	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+148	Stevenson	Stevenson, DeShawn	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+149	D. Howard	Howard, Dwight	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+149	Howard	Howard, Dwight	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+150	Croshere	Croshere, Austin	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+151	Turkoglu	Turkoglu, Hedo	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+152	Tinsley	Tinsley, Jamaal	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+154	Jones	Jones, Fred	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+155	Granger	Granger, Danny	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+156	Outlaw	Outlaw, Bo	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+156	B. Outlaw	Outlaw, Bo	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+158	J. Nelson	Nelson, Jameer	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+158	Nelson	Nelson, Jameer	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+159	Harrison	Harrison, David	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+161	Garrity	Garrity, Pat	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+163	R. Evans	Evans, Reggie	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+163	Evans	Evans, Reggie	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+164	Kaman	Kaman, Chris	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+165	Cassell	Cassell, Sam	NBA	BOS	2007-2008	Signing	2008-03-04	2008-07-01
+165	Cassell	Cassell, Sam	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-02-28
+166	R. Allen	Allen, Ray	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+166	W. Allen	Allen, Ray	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+167	Brand	Brand, Elton	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+168	Petro	Petro, Johan	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+169	Ross	Ross, Quinton	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+170	Lewis	Lewis, Rashard	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+170	R. Lewis	Lewis, Rashard	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+171	Mobley	Mobley, Cuttino	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+172	Collison	Collison, Nick	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+173	Ridnour	Ridnour, Luke	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+174	Murray	Murray, Ronald (Flip)	NBA	IND	2007-2008	20080302MILIND	2008-03-02	2008-07-01
+174	F. Murray	Murray, Ronald (Flip)	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+174	Murray	Murray, Ronald (Flip)	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+176	Wilkins	Wilkins, Damien	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+180	Radmanovic	Radmanovic, Vladimir	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+181	Wilcox	Wilcox, Chris	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+185	W. Parker	Parker, William (Smush)	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-03-10
+185	Parker	Parker, William (Smush)	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-03-10
+185	Parker	Parker, William (Smush)	NBA	LAC	2007-2008	20080314LACATL	2008-03-12	2008-07-01
+185	S. Parker	Parker, William (Smush)	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-03-10
+186	K. Bryant	Bryant, Kobe	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+186	Bryant	Bryant, Kobe	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+187	Odom	Odom, Lamar	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+188	Mihm	Mihm, Chris	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+189	Brown	Brown, Kwame	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-02-01
+189	K. Brown	Brown, Kwame	NBA	MEM	2007-2008	Trade	2008-02-01	2008-07-01
+189	K. Brown	Brown, Kwame	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-02-01
+190	George	George, Devean	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+191	Cook	Cook, Brian	NBA	ORL	2007-2008	20071123CHAORL	2007-11-20	2008-07-01
+191	Cook	Cook, Brian	NBA	LAL	2007-2008	Season Start	2007-10-29	2007-11-20
+193	Vujacic	Vujacic, Sasha	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+194	Bynum	Bynum, Andrew	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+194	A. Bynum	Bynum, Andrew	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+196	Williams	Williams, Jason	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+196	J. Williams	Williams, Jason	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+197	Gasol	Gasol, Pau	NBA	LAL	2007-2008	20080205LALNJN	2008-02-01	2008-07-01
+197	Gasol	Gasol, Pau	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-02-01
+198	Battier	Battier, Shane	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+199	L. Wright	Wright, Lorenzen	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-02-16
+199	Wright	Wright, Lorenzen	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-02-16
+199	Wright	Wright, Lorenzen	NBA	SAC	2007-2008	Trade	2008-02-16	2008-07-01
+200	A. Walker	Walker, Antoine	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+200	Walker	Walker, Antoine	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+201	Haslem	Haslem, Udonis	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+202	E. Jones	Jones, Eddie	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+202	Jones	Jones, Eddie	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+203	O'Neal	O'Neal, Shaquille	NBA	PHX	2007-2008	Trade	2008-02-06	2008-07-01
+203	O'Neal	O'Neal, Shaquille	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-02-06
+203	S. O'Neal	O'Neal, Shaquille	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-02-06
+204	Wade	Wade, Dwayne	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+205	Stoudamire	Stoudamire, Damon	NBA	SAS	2007-2008	20080205SASIND	2008-02-01	2008-07-01
+205	D. Stoudamire	Stoudamire, Damon	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-02-01
+205	Stoudamire	Stoudamire, Damon	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-02-01
+206	Mourning	Mourning, Alonzo	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+209	Miller	Miller, Mike	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+209	M. Miller	Miller, Mike	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+210	Jackson	Jackson, Bobby	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-02-21
+210	B. Jackson	Jackson, Bobby	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-02-21
+210	Jackson	Jackson, Bobby	NBA	HOU	2007-2008	Trade	2008-02-21	2008-07-01
+211	Kapono	Kapono, Jason	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+212	Jones	Jones, Dahntay	NBA	SAC	2007-2008	20071214SACPHI	2007-12-14	2008-02-16
+214	Wright	Wright, Dorell	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+214	D. Wright	Wright, Dorell	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+215	Barron	Barron, Earl	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+218	Warrick	Warrick, Hakim	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+220	Krstic	Krstic, Nenad	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+221	R. Jefferson	Jefferson, Richard	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+221	Jefferson	Jefferson, Richard	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+222	Kidd	Kidd, Jason	NBA	DAL	2007-2008	Trade	2008-02-19	2008-07-01
+222	Kidd	Kidd, Jason	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-19
+223	J. Collins	Collins, Jason	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-04
+223	Collins	Collins, Jason	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-04
+223	Collins	Collins, Jason	NBA	MEM	2007-2008	20080208MEMDAL	2008-02-04	2008-07-01
+224	Carter	Carter, Vince	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+224	V. Carter	Carter, Vince	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+226	McInnis	McInnis, Jeff	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+231	Vaughn	Vaughn, Jacque	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+235	Curry	Curry, Eddy	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+236	Blount	Blount, Mark	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+237	Richardson	Richardson, Quentin	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+237	Q. Richardson	Richardson, Quentin	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+238	LaFrentz	LaFrentz, Raef	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+239	D. West	West, Delonte	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-02-21
+239	West	West, Delonte	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-02-21
+239	West	West, Delonte	NBA	CLE	2007-2008	Trade	2008-02-21	2008-07-01
+240	Pierce	Pierce, Paul	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+241	Barnes	Barnes, Matt	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+243	T. Davis	Davis, Ricky	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+243	R. Davis	Davis, Ricky	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+243	Davis	Davis, Ricky	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+244	Marbury	Marbury, Stephon	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+245	Ariza	Ariza, Trevor	NBA	ORL	2007-2008	Season Start	2007-10-29	2007-11-20
+245	Ariza	Ariza, Trevor	NBA	LAL	2007-2008	Trade	2007-11-20	2008-07-01
+246	Gomes	Gomes, Ryan	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+247	A. Jefferson	Jefferson, Al	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+247	Jefferson	Jefferson, Al	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+249	Crawford	Crawford, Jamal	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+250	J. James	James, Jerome	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+250	James	James, Jerome	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+251	Greene	Greene, Orien	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+252	Scalabrine	Scalabrine, Brian	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+253	Perkins	Perkins, Kendrick	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+254	N. Robinson	Robinson, Nate	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+254	Robinson	Robinson, Nate	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+255	Rose	Rose, Malik	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+255	M. Rose	Rose, Malik	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+257	Gooden	Gooden, Drew	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+257	Gooden	Gooden, Drew	NBA	CHI	2007-2008	Trade	2008-02-21	2008-07-01
+258	Ilgauskas	Ilgauskas, Zydrunas	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+260	James	James, LeBron	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+260	L. James	James, LeBron	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+261	Hughes	Hughes, Larry	NBA	CHI	2007-2008	Trade	2008-02-21	2008-07-01
+261	Hughes	Hughes, Larry	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+261	L. Hughes	Hughes, Larry	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+262	Snow	Snow, Eric	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+263	Marshall	Marshall, Donyell	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+263	D. Marshall	Marshall, Donyell	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+263	Marshall	Marshall, Donyell	NBA	SEA	2007-2008	Trade	2008-02-21	2008-07-01
+264	Da. Jones	Jones, Damon	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+264	D. Jones	Jones, Damon	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+265	Pavlovic	Pavlovic, Sasha	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+266	Wilks	Wilks, Mike	NBA	DEN	2007-2008	Season Start	2007-10-29	2007-12-21
+266	Wilks	Wilks, Mike	NBA	WAS	2007-2008	20071221ATLWAS	2007-12-21	2007-12-31
+266	Wilks	Wilks, Mike	NBA	SEA	2007-2008	20080307SEAPHI	2008-02-29	2008-07-01
+269	Jackson	Jackson, Luke	NBA	MIA	2007-2008	20071213WASMIA	2007-12-13	2008-07-01
+270	Hamilton	Hamilton, Richard	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+270	R. Hamilton	Hamilton, Richard	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+271	Billups	Billups, Chauncey	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+272	Prince	Prince, Tayshaun	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+273	B. Wallace	Wallace, Ben	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+273	Wallace	Wallace, Ben	NBA	CLE	2007-2008	Trade	2008-02-21	2008-07-01
+273	Wallace	Wallace, Ben	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+274	R. Wallace	Wallace, Rasheed	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+274	Wallace	Wallace, Rasheed	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+275	McDyess	McDyess, Antonio	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+276	M. Evans	Evans, Maurice	NBA	LAL	2007-2008	Season Start	2007-10-29	2007-11-20
+276	Evans	Evans, Maurice	NBA	ORL	2007-2008	Trade	2007-11-20	2008-07-01
+276	Evans	Evans, Maurice	NBA	LAL	2007-2008	Season Start	2007-10-29	2007-11-20
+276	M. Evans	Evans, Maurice	NBA	ORL	2007-2008	Trade	2007-11-20	2008-07-01
+277	Arroyo	Arroyo, Carlos	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+278	Milicic	Milicic, Darko	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+279	Delfino	Delfino, Carlos	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+280	Maxiell	Maxiell, Jason	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+281	L. Williams	Williams, Louis	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+281	Williams	Williams, Louis	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+283	Jaric	Jaric, Marko	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+284	Przybilla	Przybilla, Joel	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+285	Garnett	Garnett, Kevin	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+286	D. Miles	Miles, Darius	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+286	Miles	Miles, Darius	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+287	Randolph	Randolph, Zach	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+287	Z. Randolph	Randolph, Zach	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+288	Szczerbiak	Szczerbiak, Wally	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-02-21
+288	Szczerbiak	Szczerbiak, Wally	NBA	CLE	2007-2008	Trade	2008-02-21	2008-07-01
+289	Telfair	Telfair, Sebastian	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+292	Hassell	Hassell, Trenton	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+292	Hassell	Hassell, Trenton	NBA	NJN	2007-2008	Trade	2008-02-19	2008-07-01
+293	McCants	McCants, Rashad	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+294	Patterson	Patterson, Ruben	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+295	Dixon	Dixon, Juan	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-02-21
+295	Dixon	Dixon, Juan	NBA	DET	2007-2008	Trade	2008-02-21	2008-07-01
+296	Jack	Jack, Jarrett	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+297	Ratliff	Ratliff, Theo	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-02-29
+297	Ratliff	Ratliff, Theo	NBA	DET	2007-2008	20080307DETNYK	2008-03-04	2008-07-01
+298	Carter	Carter, Anthony	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+300	Madsen	Madsen, Mark	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+301	Frahm	Frahm, Richie	NBA	LAC	2007-2008	20071214LACMEM	2007-12-14	2008-07-01
+302	Ming	Ming, Yao	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+302	Yao	Ming, Yao	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+304	Ju. Howard	Howard, Juwan	NBA	DAL	2007-2008	SeasonStart	2007-10-29	2008-07-01
+305	McGrady	McGrady, Tracy	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+306	Swift	Swift, Stromile	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-02-04
+306	S. Swift	Swift, Stromile	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-02-04
+306	Swift	Swift, Stromile	NBA	NJN	2007-2008	20080208NJNCHA	2008-02-04	2008-07-01
+307	D. Anderson	Anderson, Derek	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+307	Anderson	Anderson, Derek	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+308	Alston	Alston, Rafer	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+309	Wesley	Wesley, David	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+311	Bowen	Bowen, Ryan	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+311	R. Bowen	Bowen, Ryan	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+312	Mutombo	Mutombo, Dikembe	NBA	HOU	2007-2008	Season Start	2007-10-30	2008-07-01
+313	Arenas	Arenas, Gilbert	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+315	Jeffries	Jeffries, Jared	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+316	Jamison	Jamison, Antawn	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+317	J. Graham	Graham, Joey	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+317	Graham	Graham, Joey	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+318	M. James	James, Mike	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-02-21
+318	James	James, Mike	NBA	NOH	2007-2008	Trade	2008-02-21	2008-07-01
+318	James	James, Mike	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-02-21
+319	Bosh	Bosh, Chris	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+320	Woods	Woods, Loren	NBA	HOU	2007-2008	20080322HOUPHX	2008-03-21	2008-07-01
+321	A. Daniels	Daniels, Antonio	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+321	Daniels	Daniels, Antonio	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+322	Haywood	Haywood, Brendan	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+323	E. Thomas	Thomas, Etan	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+323	Thomas	Thomas, Etan	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+323	D. Thomas	Thomas, Etan	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+324	Butler	Butler, Caron	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+324	C. Butler	Butler, Caron	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+324	J. Butler	Butler, Caron	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+326	Peterson	Peterson, Morris	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+327	Villanueva	Villanueva, Charlie	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+328	Hayes	Hayes, Jarvis	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+328	J. Hayes	Hayes, Jarvis	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+329	Ruffin	Ruffin, Michael	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+330	Bonner	Bonner, Matt	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+331	Calderon	Calderon, Jose	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+332	Atkins	Atkins, Chucky	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+337	Johnson	Johnson, Anthony	NBA	SAC	2007-2008	Trade	2008-02-16	2008-07-01
+337	A. Johnson	Johnson, Anthony	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-02-16
+344	Udrih	Udrih, Beno	NBA	SAC	2007-2008	Signed	2007-11-01	2008-07-01
+348	Hudson	Hudson, Troy	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+349	Dupree	Dupree, Ronald	NBA	DET	2007-2008	Season Start	2007-10-29	2008-04-03
+349	Dupree	Dupree, Ronald	NBA	SEA	2007-2008	20080404HOUSEA	2008-04-03	2008-07-01
+353	A. Williams	Williams, Aaron	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+353	Williams	Williams, Aaron	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+354	T. Outlaw	Outlaw, Travis	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+354	Outlaw	Outlaw, Travis	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+355	Blake	Blake, Steve	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+356	Webster	Webster, Martell	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+357	Watson	Watson, Earl	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+362	Frye	Frye, Channing	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+366	Bogans	Bogans, Keith	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+367	Dickau	Dickau, Dan	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+372	Head	Head, Luther	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+373	Booth	Booth, Calvin	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+377	Lee	Lee, David	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+382	Owens	Owens, Andre	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+383	J. Smith	Smith, Joe	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+383	Smith	Smith, Joe	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+383	Smith	Smith, Joe	NBA	CLE	2007-2008	Trade	2008-02-21	2008-07-01
+389	Pargo	Pargo, Jannero	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+390	Maggette	Maggette, Corey	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+392	Pollard	Pollard, Scot	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+401	Posey	Posey, James	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+403	Voskuhl	Voskuhl, Jake	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+408	Johnson	Johnson, Linton	NBA	PHX	2007-2008	20080224DETPHX	2008-02-22	2008-03-27
+408	Johnson	Johnson, Linton	NBA	TOR	2007-2008	20080330NOHTOR	2008-03-27	2008-07-01
+409	Hardaway	Hardaway, Anfernee	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+410	Marks	Marks, Sean	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+411	Moore	Moore, Mikki	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+412	Storey	Storey, Awvee	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+413	Blatche	Blatche, Andray	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+416	Snyder	Snyder, Kirk	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-02-21
+416	Snyder	Snyder, Kirk	NBA	MIN	2007-2008	Trade	2008-02-21	2008-07-01
+417	Ellis	Ellis, Monta	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+418	Gill	Gill, Eddie	NBA	SEA	2007-2008	20080324PORSEA	2008-03-24	2008-07-01
+418	Gill	Gill, Eddie	NBA	NJN	2007-2008	20071116ORLNJN	2007-11-16	2008-03-24
+419	Dooling	Dooling, Keyon	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+426	Miles	Miles, C.J.	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+430	Powell	Powell, Josh	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+433	S. Randolph	Randolph, Shavlik	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+433	Randolph	Randolph, Shavlik	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+436	D. Martin	Martin, Darrick	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+436	Martin	Martin, Darrick	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+439	Mbenga	Mbenga, DJ	NBA	GSW	2007-2008	20071120GSWNYK	2007-11-17	2008-01-06
+439	Mbenga	Mbenga, DJ	NBA	LAL	2007-2008	20080121DENLAL	2008-01-21	2008-07-01
+444	Wright	Wright, Antoine	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-19
+444	Wright	Wright, Antoine	NBA	DAL	2007-2008	Trade	2008-02-19	2008-07-01
+444	A. Wright	Wright, Antoine	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-02-19
+450	Khryapa	Khryapa, Viktor	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+453	Diogu	Diogu, Ike	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+454	Wafer	Wafer, Von	NBA	POR	2007-2008	Trade	2008-02-21	2008-07-01
+454	Wafer	Wafer, Von	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-02-21
+458	Dalembert	Dalembert, Samuel	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+459	Walton	Walton, Luke	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+460	Doleac	Doleac, Michael	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+467	Griffin	Griffin, Adrian	NBA	SEA	2007-2008	Trade	2008-02-21	2008-07-01
+467	A. Griffin	Griffin, Adrian	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+467	Griffin	Griffin, Adrian	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-02-21
+468	Foster	Foster, Jeff	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+470	Diener	Diener, Travis	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+472	Swift	Swift, Robert	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+472	R. Swift	Swift, Robert	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+477	Graham	Graham, Stephen	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+477	S. Graham	Graham, Stephen	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+483	Livingston	Livingston, Shaun	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+484	Cardinal	Cardinal, Brian	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+486	G. Hill	Hill, Grant	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+486	Hill	Hill, Grant	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+488	Banks	Banks, Marcus	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-02-06
+488	Banks	Banks, Marcus	NBA	MIA	2007-2008	20080210LALMIA	2008-02-06	2008-07-01
+489	Newble	Newble, Ira	NBA	SEA	2007-2008	Trade	2008-02-21	2008-03-21
+489	Newble	Newble, Ira	NBA	LAL	2007-2008	20080321SEALAL	2008-03-21	2008-07-01
+489	Newble	Newble, Ira	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+492	Stackhouse	Stackhouse, Jerry	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+501	A. Allen	Allen, Tony	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+501	T. Allen	Allen, Tony	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+505	Varejao	Varejao, Anderson	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+508	C. Hayes	Hayes, Chuck	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+508	Hayes	Hayes, Chuck	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+510	A. Johnson	Johnson, Amir	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+510	Johnson	Johnson, Amir	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+514	Green	Green, Gerald	NBA	HOU	2007-2008	Trade	2008-02-21	2008-07-01
+514	G. Green	Green, Gerald	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-02-21
+514	Green	Green, Gerald	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-02-21
+515	L. Hunter	Hunter, Lindsey	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+515	Hunter	Hunter, Lindsey	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+516	Turiaf	Turiaf, Ronny	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+517	Dw. Jones	Jones, Dwayne	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+518	Boozer	Boozer, Carlos	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+525	Barrett	Barrett, Andre	NBA	LAC	2007-2008	20080301DETLAC	2008-03-01	2008-07-01
+531	Thomas	Thomas, Billy	NBA	CLE	2007-2008	20080222WASCLE	2008-02-21	2008-07-01
+531	Thomas	Thomas, Billy	NBA	NJN	2007-2008	20071226DETNJN	2007-12-21	2008-02-21
+537	Stoudemire	Stoudemire, Amare	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+541	Green	Green, Willie	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+541	W. Green	Green, Willie	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+544	Udoka	Udoka, Ime	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+544	Udoka	Udoka, Ime	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+550	Jones	Jones, Solomon	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+550	S. Jones	Jones, Solomon	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+551	S. Williams	Williams, Shelden	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-02-16
+551	S. Williams	Williams, Shelden	NBA	SAC	2007-2008	Trade	2008-02-16	2008-07-01
+552	Powe	Powe, Leon	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+553	Rondo	Rondo, Rajon	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+555	Morrison	Morrison, Adam	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+556	Herrmann	Herrmann, Walter	NBA	DET	2007-2008	20071228INDDET	2007-12-14	2008-07-01
+556	Herrmann	Herrmann, Walter	NBA	CHA	2007-2008	Season Start	2007-10-29	2007-12-14
+557	Hollins	Hollins, Ryan	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+558	Sefolosha	Sefolosha, Thabo	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+559	Thomas	Thomas, Tyrus	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+559	T. Thomas	Thomas, Tyrus	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+560	S. Brown	Brown, Shannon	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+560	Brown	Brown, Shannon	NBA	CHI	2007-2008	Trade	2008-02-21	2008-07-01
+561	Gibson	Gibson, Daniel	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+562	Ager	Ager, Maurice	NBA	NJN	2007-2008	Trade	2008-02-19	2008-07-01
+562	Ager	Ager, Maurice	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+563	Barea	Barea, Jose	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-07-01
+565	Diawara	Diawara, Yakhouba	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+567	O'Bryant	O'Bryant, Patrick	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+569	Novak	Novak, Steve	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+572	Baston	Baston, Maceo	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+573	Williams	Williams, Shawne	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+573	S. Williams	Williams, Shawne	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+574	Davis	Davis, Paul	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+574	P. Davis	Davis, Paul	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+575	Farmar	Farmar, Jordan	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+577	Gay	Gay, Rudy	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+578	A. Johnson	Johnson, Alexander	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+578	Johnson	Johnson, Alexander	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+579	Lowry	Lowry, Kyle	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+580	Kinsey	Kinsey, Tarence	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+581	Quinn	Quinn, Chris	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+585	Noel	Noel, David	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+588	Foye	Foye, Randy	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+589	Smith	Smith, Craig	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+589	C. Smith	Smith, Craig	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+592	M. Williams	Williams, Marcus	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+593	Boone	Boone, Josh	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+594	H. Armstrong	Armstrong, Hilton	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+594	Armstrong	Armstrong, Hilton	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+595	Simmons	Simmons, Cedric	NBA	CHI	2007-2008	Trade	2008-02-21	2008-07-01
+595	C. Simmons	Simmons, Cedric	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+595	Simmons	Simmons, Cedric	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-02-21
+596	Vinicius	Vinicius, Marcus	NBA	MEM	2007-2008	Trade	2008-02-21	2008-07-01
+596	Vinicius	Vinicius, Marcus	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-02-21
+596	Viera de Souza	Vinicius, Marcus	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-02-21
+597	Balkman	Balkman, Renaldo	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+598	Collins	Collins, Mardy	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+598	M. Collins	Collins, Mardy	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+599	Redick	Redick, J.J.	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+600	Augustine	Augustine, James	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+601	Carney	Carney, Rodney	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+602	Jones	Jones, Bobby	NBA	HOU	2007-2008	20080229HOUMEM	2008-02-26	2008-03-12
+602	Jones	Jones, Bobby	NBA	MIA	2007-2008	20080312NYKMIA	2008-03-12	2008-04-01
+602	Jones	Jones, Bobby	NBA	SAS	2007-2008	20080401GSWSAS	2008-04-01	2008-04-10
+602	Jones	Jones, Bobby	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-01-07
+602	Jones	Jones, Bobby	NBA	MEM	2007-2008	20080111MEMGSW	2008-01-10	2008-02-26
+602	Jones	Jones, Bobby	NBA	DEN	2007-2008	20080413HOUDEN	2008-04-13	2008-07-01
+602	B. Jones	Jones, Bobby	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-01-07
+605	Rodriguez	Rodriguez, Sergio	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+606	Roy	Roy, Brandon	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+607	Aldridge	Aldridge, LaMarcus	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+608	Douby	Douby, Quincy	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+609	Gelabale	Gelabale, Mickael	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+610	Sene	Sene, Mouhamed	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+612	Bargnani	Bargnani, Andrea	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+614	Parker	Parker, Anthony	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+614	A. Parker	Parker, Anthony	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+617	Brewer	Brewer, Ronnie	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+622	R. Mason	Mason, Roger	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+622	Mason	Mason, Roger	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+629	Millsap	Millsap, Paul	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+636	Garbajosa	Garbajosa, Jorge	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+636	Garbarjosa	Garbajosa, Jorge	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+640	Kleiza	Kleiza, Linas	NBA	DEN	2007-2008	Season Start	2007-10-29	2008-07-01
+643	Azubuike	Azubuike, Kelenna	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+644	A. Brown	Brown, Andre	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+646	Williams	Williams, Justin	NBA	HOU	2007-2008	20080310NJNHOU	2008-03-07	2008-07-01
+646	J. Williams	Williams, Justin	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-02-16
+650	Richardson	Richardson, Jeremy	NBA	MEM	2007-2008	20071221MEMDET	2007-12-21	2008-01-07
+650	Richardson	Richardson, Jeremy	NBA	SAS	2007-2008	20080110DETSAS	2008-01-10	2008-07-01
+650	Richardson	Richardson, Jeremy	NBA	ATL	2007-2008	20080219ATLLAL	2008-02-18	2008-07-01
+653	Amundson	Amundson, Louis	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+655	Morris	Morris, Randolph	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+659	Washington	Washington, Darius	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+660	Mahinmi	Mahinmi, Ian	NBA	SAS	2007-2008	Season Start	2007-10-29	2008-07-01
+661	Oden	Oden, Greg	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+662	McRoberts	McRoberts, Josh	NBA	POR	2007-2008	Season Start	2007-10-29	2008-07-01
+663	Green	Green, Taurean	NBA	POR	2007-2008	Season Start	2007-10-29	2008-02-21
+663	Green	Green, Taurean	NBA	DEN	2007-2008	Trade	2008-02-21	2008-07-01
+663	T. Green	Green, Taurean	NBA	POR	2007-2008	Season Start	2007-10-29	2008-02-21
+664	Karl	Karl, Coby	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-07-01
+665	Crittenton	Crittenton, Javaris	NBA	MEM	2007-2008	20080205MILMEM	2008-02-01	2008-07-01
+665	Crittenton	Crittenton, Javaris	NBA	LAL	2007-2008	Season Start	2007-10-29	2008-02-01
+666	Brooks	Brooks, Aaron	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+667	Landry	Landry, Carl	NBA	HOU	2007-2008	Season Start	2007-10-29	2008-07-01
+668	Almond	Almond, Morris	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+669	Fesenko	Fesenko, Kyrylo	NBA	UTA	2007-2008	Season Start	2007-10-29	2008-07-01
+670	Lasme	Lasme, Stephane	NBA	MIA	2007-2008	20080321WASMIA	2008-03-21	2008-07-01
+670	Lasme	Lasme, Stephane	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-03-21
+671	B. Wright	Wright, Brandan	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+671	Wright	Wright, Brandan	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+672	Perovic	Perovic, Kosta	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+673	Belinelli	Belinelli, Marco	NBA	GSW	2007-2008	Season Start	2007-10-29	2008-07-01
+674	Scola	Scola, Luis	NBA	HOU	2007-2008	Season Start	2007-10-30	2008-07-01
+675	Davis	Davis, Glen	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+675	G. Davis	Davis, Glen	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+676	Pruitt	Pruitt, Gabe	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+677	Wallace	Wallace, Brandon	NBA	BOS	2007-2008	Season Start	2007-10-29	2008-07-01
+678	S. Williams	Williams, Sean	NBA	NJN	2007-2008	Season Start	2007-10-29	2008-07-01
+679	W. Chandler	Chandler, Wilson	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+679	Chandler	Chandler, Wilson	NBA	NYK	2007-2008	Season Start	2007-10-29	2008-07-01
+680	H. Hill	Hill, Herbert	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+680	Hill	Hill, Herbert	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+681	T. Young	Young, Thaddeus	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+681	Young	Young, Thaddeus	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+682	Moon	Moon, Jamario	NBA	TOR	2007-2008	Season Start	2007-10-29	2008-07-01
+683	Curry	Curry, JamesOn	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+683	J. Curry	Curry, JamesOn	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+684	Gardner	Gardner, Thomas	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+685	Gray	Gray, Aaron	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+686	Noah	Noah, Joakim	NBA	CHI	2007-2008	Season Start	2007-10-29	2008-07-01
+687	Nichols	Nichols, Demetris	NBA	CHI	2007-2008	20080123INDCHI	2007-12-07	2008-07-01
+687	Nichols	Nichols, Demetris	NBA	CLE	2007-2008	Season Start	2007-10-29	2007-12-07
+688	Tolliver	Tolliver, Anthony	NBA	CLE	2007-2008	Season Start	2007-10-29	2008-07-01
+689	Afflalo	Afflalo, Arron	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+690	Samb	Samb, Cheikh	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+691	Stuckey	Stuckey, Rodney	NBA	DET	2007-2008	Season Start	2007-10-29	2008-07-01
+692	Sims	Sims, Courtney	NBA	IND	2007-2008	Season Start	2007-10-29	2008-07-01
+693	Jianlian	Jianlian, Yi	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+693	Yi	Jianlian, Yi	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+694	Sessions	Sessions, Ramon	NBA	MIL	2007-2008	Season Start	2007-10-29	2008-07-01
+695	Horford	Horford, Al	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+696	Law	Law, Acie	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+697	West	West, Mario	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+697	M. West	West, Mario	NBA	ATL	2007-2008	Season Start	2007-10-29	2008-07-01
+698	Davidson	Davidson, Jermareo	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+699	Dudley	Dudley, Jared	NBA	CHA	2007-2008	Season Start	2007-10-29	2008-07-01
+700	J. Anthony	Anthony, Joel	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+700	Anthony	Anthony, Joel	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+701	Cook	Cook, Daequan	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+701	D. Cook	Cook, Daequan	NBA	MIA	2007-2008	Season Start	2007-10-29	2008-07-01
+702	Gortat	Gortat, Marcin	NBA	ORL	2007-2008	Season Start	2007-10-29	2008-07-01
+703	McGuire	McGuire, Dominic	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+704	Pecherov	Pecherov, Oleksiy	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+705	Young	Young, Nick	NBA	WAS	2007-2008	Season Start	2007-10-29	2008-07-01
+706	Fazekas	Fazekas, Nick	NBA	DAL	2007-2008	Season Start	2007-10-29	2008-02-19
+706	Fazekas	Fazekas, Nick	NBA	LAC	2007-2008	20080229LACDEN	2008-02-26	2008-07-01
+707	Conley	Conley, Mike	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+708	Jacobsen	Jacobsen, Casey	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+709	Navarro	Navarro, Juan Carlos	NBA	MEM	2007-2008	Season Start	2007-10-29	2008-07-01
+710	Haluksa	Haluksa, Adam	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-02-21
+710	Haluksa	Haluksa, Adam	NBA	HOU	2007-2008	Trade	2008-02-21	2008-07-01
+711	Wright	Wright, Julian	NBA	NOH	2007-2008	Season Start	2007-10-29	2008-07-01
+712	Brewer	Brewer, Corey	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+712	C. Brewer	Brewer, Corey	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+713	C. Richard	Richard, Chris	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+713	Richard	Richard, Chris	NBA	MIN	2007-2008	Season Start	2007-10-29	2008-07-01
+714	Durant	Durant, Kevin	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+715	J. Green	Green, Jeff	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+715	Green	Green, Jeff	NBA	SEA	2007-2008	Season Start	2007-10-29	2008-07-01
+716	Thornton	Thornton, Al	NBA	LAC	2007-2008	Season Start	2007-10-29	2008-07-01
+717	Strawberry	Strawberry, D. J.	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+718	Tucker	Tucker, Alando	NBA	PHX	2007-2008	Season Start	2007-10-29	2008-07-01
+719	Hawes	Hawes, Spencer	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+720	Shakur	Shakur, Mustafa	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+721	Watkins	Watkins, Darryl	NBA	SAC	2007-2008	Season Start	2007-10-29	2008-07-01
+722	J. Smith	Smith, Jason	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+722	Smith	Smith, Jason	NBA	PHI	2007-2008	Season Start	2007-10-29	2008-07-01
+723	McCoy	McCoy, Jelani	NBA	DEN	2007-2008	20071129DENLAL	2007-11-29	2008-07-01
+724	Williams	Williams, MarcusE	NBA	SAS	2007-2008	20071226CHISAS	2007-12-21	2008-07-01
+725	Langford	Langford, Keith	NBA	SAS	2007-2008	20071228TORSAS	2007-12-28	2008-07-01
+726	Watson	Watson, C.J.	NBA	GSW	2007-2008	20080109GSWPOR	2008-01-09	2008-07-01
+727	Diaz	Diaz, Guillermo	NBA	LAC	2007-2008	20080115PHXLAC	2008-01-08	2008-07-01
+728	Dickens	Dickens, Kaniel	NBA	CLE	2007-2008	20080222WASCLE	2008-02-21	2008-07-01
+729	Harris	Harris, Mike	NBA	HOU	2007-2008	20080310NJNHOU	2008-03-08	2008-07-01
+730	Allred	Allred, Lance	NBA	CLE	2007-2008	20080317CLEORL	2008-03-13	2008-07-01
+731	Ahearn	Ahearn, Blake	NBA	MIA	2007-2008	20080321WASMIA	2008-03-21	2008-07-01
+732	Powell	Powell, Kasib	NBA	MIA	2007-2008	20080322MIACHA	2008-03-22	2008-07-01
+801	Howard	Howard	NBA	DAL	2007-2008	20071102DALATL	NULL	NULL
+802	Brown	Brown	NBA	MEM	2007-2008	20071103INDMEM	NULL	NULL
+803	Brown	Brown	NBA	MEM	2007-2008	20071110MEMUTA	NULL	NULL
+804	Williams	Williams	NBA	SAC	2007-2008	20071116NYKSAC	NULL	NULL
+805	Williams	Williams	NBA	SAC	2007-2008	20071118DETSAC	NULL	NULL
+806	Brown	Brown	NBA	MEM	2007-2008	20071119SEAMEM	NULL	NULL
+807	Williams	Williams	NBA	SAC	2007-2008	20071121SACPHX	NULL	NULL
+808	Brown	Brown	NBA	MEM	2007-2008	20071123MEMSAS	NULL	NULL
+809	Williams	Williams	NBA	SAC	2007-2008	20071126SASSAC	NULL	NULL
+810	Brown	Brown	NBA	MEM	2007-2008	20071128MEMTOR	NULL	NULL
+811	Brown	Brown	NBA	MEM	2007-2008	20071201MINMEM	NULL	NULL
+812	Brown	Brown	NBA	MEM	2007-2008	20071203PORMEM	NULL	NULL
+813	Brown	Brown	NBA	MEM	2007-2008	20071205MEMHOU	NULL	NULL
+814	Williams	Williams	NBA	SAC	2007-2008	20071207LACSAC	NULL	NULL
+815	Brown	Brown	NBA	MEM	2007-2008	20071214LACMEM	NULL	NULL
+816	Brown	Brown	NBA	MEM	2007-2008	20071215MEMORL	NULL	NULL
+817	Williams	Williams	NBA	SAC	2007-2008	20071215SACWAS	NULL	NULL
+818	Brown	Brown	NBA	MEM	2007-2008	20071217GSWMEM	NULL	NULL
+819	Bibby	Bibby	NBA	ATL	2007-2008	20071219MIAATL	NULL	NULL
+820	Marion	Marion	NBA	MIA	2007-2008	20071219MIAATL	NULL	NULL
+821	Brown	Brown	NBA	MEM	2007-2008	20071219SASMEM	NULL	NULL
+822	Brown	Brown	NBA	MEM	2007-2008	20071221MEMDET	NULL	NULL
+823	Brown	Brown	NBA	MEM	2007-2008	20071222PHIMEM	NULL	NULL
+824	Brown	Brown	NBA	MEM	2007-2008	20071226NOHMEM	NULL	NULL
+825	Brown	Brown	NBA	MEM	2007-2008	20071228HOUMEM	NULL	NULL
+826	Brown	Brown	NBA	MEM	2007-2008	20071230MEMSAS	NULL	NULL
+827	Williams	Williams	NBA	SAC	2007-2008	20071230PHXSAC	NULL	NULL
+828	Brown	Brown	NBA	MEM	2007-2008	20080102MEMIND	NULL	NULL
+829	Williams	Williams	NBA	SAC	2007-2008	20080102SACNYK	NULL	NULL
+830	Williams	Williams	NBA	SAC	2007-2008	20080104SACCLE	NULL	NULL
+831	Williams	Williams	NBA	SAC	2007-2008	20080105SACCHI	NULL	NULL
+832	Brown	Brown	NBA	MEM	2007-2008	20080108LALMEM	NULL	NULL
+833	Williams	Williams	NBA	SAC	2007-2008	20080108ORLSAC	NULL	NULL
+834	Williams	Williams	NBA	SAC	2007-2008	20080110MEMSAC	NULL	NULL
+835	Williams	Williams	NBA	SAC	2007-2008	20080114DALSAC	NULL	NULL
+836	Williams	Williams	NBA	SAC	2007-2008	20080116SACTOR	NULL	NULL
+837	Brown	Brown	NBA	MEM	2007-2008	20080118SEAMEM	NULL	NULL
+838	Williams	Williams	NBA	SAC	2007-2008	20080122NJNSAC	NULL	NULL
+839	Williams	Williams	NBA	SAC	2007-2008	20080123SACLAC	NULL	NULL
+840	Brown	Brown	NBA	MEM	2007-2008	20080125MEMWAS	NULL	NULL
+841	Williams	Williams	NBA	SAC	2007-2008	20080125SACUTA	NULL	NULL
+842	Brown	Brown	NBA	MEM	2007-2008	20080126LACMEM	NULL	NULL
+843	Brown	Brown	NBA	MEM	2007-2008	20080128DALMEM	NULL	NULL
+844	Williams	Williams	NBA	SAC	2007-2008	20080130CHASAC	NULL	NULL
+845	Brown	Brown	NBA	MEM	2007-2008	20080130DENMEM	NULL	NULL
+846	Brown	Brown	NBA	MEM	2007-2008	20080202UTAMEM	NULL	NULL
+847	Williams	Williams	NBA	SAC	2007-2008	20080206SEASAC	NULL	NULL
+848	Williams	Williams	NBA	SAC	2007-2008	20080208UTASAC	NULL	NULL
+849	Williams	Williams	NBA	SAC	2007-2008	20080213SACHOU	NULL	NULL
