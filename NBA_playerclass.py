@@ -15,8 +15,8 @@ class player():
         self.curgame = None
         self._gamestats = dict()
         self._games = set()
+        self.actionfeed = list()
         #for stat in statslist:
-
 
     def _newgame(self, game):
         '''
@@ -105,7 +105,7 @@ class player():
         else:
             raise ValueError('player "%s" not a player' % name)
 
-    def updatestat(self, stat, args):
+    def updatestat(self, time, stat, args):
         '''
         Updates stat "stat" in "playerstats" by "increment; I think
         there is a way to handle these together instead of writing out
@@ -115,38 +115,43 @@ class player():
             if stat.lower() in reqargs and args==None:
                 return -1
             else:
+                new_action = None
                 if stat=='PTS':
                     self.stats['pts'] += args
                 elif stat=='FG':
                     self.stats['fga'] += 1
                     if args=='Made':
                         self.stats['fg'] += 1
+                    new_action = ' '.join([args, 'FG'])
                 elif stat=='3PT':
                     self.stats['3pta'] += 1
                     if args=='Made':
                         self.stats['3pt'] += 1
+                    new_action = ' '.join([args, '3PT'])
                 elif stat=='FT':
                     self.stats['fta'] += 1
                     if args=='Made':
                         self.stats['ft'] += 1
-                elif stat=='STL':
-                    self.stats['stl'] += 1
-                elif stat=='AST':
-                    self.stats['ast'] += 1
-                elif stat=='BLK':
-                    self.stats['blk'] += 1  
-                elif stat=='TO':
-                    self.stats['to'] += 1
-                elif stat=='PF':
-                    self.stats['pf'] += 1
+                    new_action = ' '.join([args, 'FT'])
+                elif stat in ['STL','AST','BLK','TO','PF']:
+                    self.stats[stat.lower()] += 1
+                    new_action = stat
                 elif stat=='RB':
                     args = args.split()
                     args = [arg.split(":") for arg in args]
+                    if args[2][0] > self.stats['rbo']:
+                        new_action = 'RBO'
+                    elif args[5][0] > self.stats['rbd']:
+                        new_action = 'RBD'
                     self.stats['rbo']  = int(args[2][0])
                     self.stats['rbd']  = int(args[5][0])
                     self.stats['rb']   = int(args[2][0]) + int(args[5][0])
                 elif stat=='MINS':
                     self.stats['mins'] += args
+                # append line to action feed
+                if new_action:
+                    self.actionfeed.append([self.curgame, time, new_action])
+                                        
                 return 1
         else:
             return -2

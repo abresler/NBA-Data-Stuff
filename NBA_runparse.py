@@ -3,17 +3,19 @@ import NBA_parseplaybyplay as NBA1
 import NBA_playerclass as NBAP
 import NBA_loadandsplit as LAS
 
+print('checking files and loading game files...')
 chdir = os.getcwd()
-fhandlepbp = os.path.join(chdir, "playbyplay20072008reg20081211.txt")
-fhandlenam = os.path.join(chdir, "players20072008reg20081211.txt")
+fhandlepbp = os.path.join(chdir,'DataFiles', "playbyplay20072008reg20081211.txt")
+fhandlenam = os.path.join(chdir,'DataFiles', "players20072008reg20081211.txt")
 ##fhandlepbp = os.path.join(chdir, "playbyplay2008playoffs20081211.txt")
 ##fhandlenam = os.path.join(chdir, "players2008playoffs20081211.txt")
 # initialize players dictionary, game dictionary
 pstats = LAS.createplayers(fhandlenam)
 gstats = LAS.creategames(fhandlepbp, fhandlenam)
-# load play-by-play and find game indicies; pbp is actions only
-gamedict, pbp = LAS.getpbp(fhandlepbp)
+# load play-by-play and find game indicies; pbp is times and actions
+gamedict, pbp = LAS.getpbp(fhandlepbp, ['times', 'actions'])
 # iterate over games and parse play-by-play
+print('parsing play-by-play data...')
 for game in gamedict.keys():
     # get teams
     home, away = game[-3:], game[-6:-3]
@@ -24,8 +26,8 @@ for game in gamedict.keys():
     for p in active:
         pstats[p]._newgame(game)
     # parse game
-    actions = pbp[gamedict[game][0]:gamedict[game][1]]
-    pstats, score = NBA1.processgame(actions, pstats, teams, active)
+    data = pbp[gamedict[game][0]:gamedict[game][1]]
+    pstats, score = NBA1.processgame(data, pstats, teams, active)
     # get total game stats from players involved
     gstats.update(game, pstats, active, score)
     # flush game stats for player involved
@@ -36,7 +38,7 @@ for game in gamedict.keys():
 print("writing out game stats...")
 gamestats = gstats.getgames()
 
-with open(os.path.join(chdir, gstats._pbpfile + \
+with open(os.path.join(chdir ,'DataFiles', gstats._pbpfile + \
                        "GameStats.txt"), 'w') as f1:
     for game in gamestats.keys():
         if game != 'statlist':
@@ -57,6 +59,7 @@ with open(os.path.join(chdir, gstats._pbpfile + \
                 '\t'.join(str(gamestats[game][p][stat]) \
                             for stat in gamestats['statlist']) + '\n')
             f1.write('\n')
+            # iterate over away team
             for p in gamestats[game][away+'Team']:
                 f1.write(\
                 gamestats[game][p]['Name']  + '\t' + \
@@ -77,7 +80,7 @@ for k in range(min(idlist), max(idlist)+1):
     except ValueError:
         pass
 
-with open(os.path.join(chdir, gstats._pbpfile + \
+with open(os.path.join(chdir, 'DataFiles', gstats._pbpfile + \
                        "PlayerStats.txt"), 'w') as f1:
     f1.write('Name' + '\t' + 'ID' + '\t' + 'Team' + '\n')
     for ID in rgtorder:
@@ -89,6 +92,16 @@ with open(os.path.join(chdir, gstats._pbpfile + \
                      '\t'.join(str(p[game][stat]) \
                             for stat in p['statlist']) + '\n')
         f1.write('\n\n')
+
+playerfeeds = [pstats[p].actionfeed for p in pstats.keys()]
+with open(os.path.join(chdir ,'DataFiles', gstats._pbpfile + \
+                       "PlayerFeedStats.txt"), 'w') as f1:
+    for ID in rgtorder:
+        p = playerfeeds[ID]
+        f1.write(str(ID) + '\n')
+        for line in p:
+            f1.write('\t'.join(line) + '\n')
+        f1.write('\n\n')
+        
             
-    
 print 'Done'

@@ -28,17 +28,24 @@ def creategames(fhandlepbp, fhandlenam):
     return gamestats
 
 
-def getpbp(fhandle):
+def getpbp(fhandle, args):
     '''
     Loads the play-by-play file at fhandle, creates dictionary of game
     indicies in play-by-play, where keys are game IDs and values are
     (start, stop) tuples, where "start" is the first line the game
-    appears on in play-by-play, and "stop" is the last line;
+    appears on in play-by-play, and "stop" is the last line; only gets
+    the data fields in the list "args";
     '''
     playbyplay = loadfile(fhandle)
     gamedict = getgamelines(playbyplay)
-    playbyplay = getactions(playbyplay)
-    return gamedict, playbyplay
+    holder = dict()
+    if args[0]=='all' or args=='all':
+        args = ['gameID','linenum','times','actions']
+    if 'gameID' in args:    holder('gameIDs')   = getgameIDs(playbyplay)
+    if 'linenum' in args:   holder('linenum')   = getlinenum(playbyplay)
+    if 'times' in args:     holder('times')     = gettimes(playbyplay)
+    if 'actions' in args:   holder('actions')   = getactions(playbyplay)
+    return gamedict, zip(holder(key) for key in args)
 
 def getindex(header, detail):
     '''Pretty simple at the moment, by allows for dict'''
@@ -133,6 +140,27 @@ def getgameIDs(data, header=None):
     else: gameIDs = []
     return gameIDs
 
+def getlinenum(data, header=None):
+    '''
+    Obtains the set of line nums under the "LineNumber" column in the
+    playbyplay data;
+    '''
+    header = header if header else data[0]
+    data = data[1:] if header==data[0] else data
+    pos = getindex(header, 'LineNumber')
+    linenums = [line[pos] for line in data if line not in ['', ['']]]
+    return linenums
+
+def gettimes(data, header=None):
+    '''
+    Obtains the set of times under the "TimeRemaining" column in the
+    playbyplay data;
+    '''
+    header = header if header else data[0]
+    data = data[1:] if header==data[0] else data
+    pos = getindex(header, 'TimeRemaining')
+    times = [line[pos] for line in data if line not in ['', ['']]]
+    return times
 
 def getactions(data, header=None):
     '''
@@ -147,3 +175,4 @@ def getactions(data, header=None):
     actions = [re.split(r'(:|\(|\))', e) for e in actions]
     actions = [' '.join(e).split() for e in actions]
     return actions
+

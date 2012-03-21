@@ -78,7 +78,7 @@ def _getteamoth(team, teams):
 
 
 
-def _handleevent(line, args, pstats, teams, active):
+def _handleevent(time, line, args, pstats, teams, active):
     '''
     This module hnadles events in the "Entry" colum of the play-by-play
     data; given a phrase, line, player, etc., defines the 'players', 'stats',
@@ -186,7 +186,7 @@ def _handleevent(line, args, pstats, teams, active):
         index = _updateisym(line, index, ")")
 
     if players and stats and args:
-        pstats = _updatestats(players, stats, args, pstats)
+        pstats = _updatestats(players, stats, time, args, pstats)
         
     return index, pstats
 
@@ -260,17 +260,17 @@ def _updategameposition(update, quarter=0):
         quarter += 1
     
 
-def _updatestats(players, stats, args, pstats):
+def _updatestats(players, stats, time, args, pstats):
     for i in range(len(players)):
-        pstats = _updatestat(players[i], stats[i], args[i], pstats)
+        pstats = _updatestat(time, players[i], stats[i], args[i], pstats)
     return pstats
 
 
-def _updatestat(player, stat, arg, pstats):
+def _updatestat(time, player, stat, arg, pstats):
 
     if player:
         try:
-            val = pstats[player].updatestat(stat, arg)
+            val = pstats[player].updatestat(time, stat, arg)
             if val==-1:
                 raise AttributeError, 'this stat requires an argument: ' + stat
             elif val==-2:
@@ -280,7 +280,7 @@ def _updatestat(player, stat, arg, pstats):
     return pstats
         
 
-def processgame(actions, pstats, teams, active):
+def processgame(data, pstats, teams, active):
     '''
     Does as advertised; given a set of actions, in the format as output by
     "_getactions()", interates over the set to extract the information from
@@ -288,8 +288,10 @@ def processgame(actions, pstats, teams, active):
     players is a dictionary, with player names as keys, player team as val
     teams is a list of the 2 teams involved in the game
     '''
+    times   = [t for (t,a) in data]
+    actions = [a for (t,a) in data]
     score = _iniscore(teams)    
-    for action in actions:
+    for k,action in enumerate(actions):
         index = 0
         if action[index].lower()=='start' or action[index].lower()=='end' \
            or action[index].lower()=='jump':
@@ -310,7 +312,9 @@ def processgame(actions, pstats, teams, active):
                 if phrase and index < len(action):
                     args = (player, phrase.lower(), index)
                     index, pstats = \
-                           _handleevent(action, args, pstats, teams, active)
+                           _handleevent(times[k],action,
+                                        args, pstats,
+                                        teams, active)
                 else:
                     index = len(action)+1
     return pstats, score
