@@ -4,7 +4,7 @@ http://basketballvalue.com/downloads.php; these files contain 4 columns:
 "GameID", "LineNumber", "TimeRemaining", and "Entry", which describes the
 event that took place at this time.
 """
-import sys, os, re
+import sys, os, re, datetime
 from NBA_playerclass import player as pl
 from NBA_playerclass import game
 
@@ -24,7 +24,8 @@ from NBA_playerclass import game
 def _getphrase(line, index):
     '''Finds the next keyword phrase in line, or eol'''
     phrases = ['free', '3pt', 'shot', 'foul', 'timeout', 'violation',
-               'rebound', 'turnover', 'tunover', 'steal', 'assist', 'block']
+               'rebound', 'turnover', 'tunover', 'steal', 'assist',
+               'block', 'substitution']
     if line[index].lower() in phrases:
         phrase = line[index].lower()
         index += 1
@@ -35,7 +36,7 @@ def _getphrase(line, index):
     return phrase, index
 
 
-def _getplayer(line, index, active):
+def _getplayer(line, index, oncourt):
     '''
     Gets the name of the current player in Entry, and returns
     the name and the new starting index (sicne some player's
@@ -46,7 +47,7 @@ def _getplayer(line, index, active):
     if player.endswith('.'):
         player = player + ' ' + line[index]
         index += 1
-    player = _isplayer(player, active)
+    player = _isplayer(player, oncourt)
     if not player:
         # shift index back one space
         index -= 1
@@ -75,7 +76,7 @@ def _getteamoth(team, teams):
     return team
 
 
-def _handleevent(time, line, args, pstats, teams, active):
+def _handleevent(times, line, args, pstats, teams, active, oncourt):
     '''
     This module hnadles events in the "Entry" colum of the play-by-play
     data; given a phrase, line, player, etc., defines the 'players', 'stats',
@@ -89,35 +90,35 @@ def _handleevent(time, line, args, pstats, teams, active):
         # throw always follows free; 2 versions
         try:
             # look for ')' to signal made shot
-            index = _updateisym(line, index, ")")
-            players = [player, player]
-            stats = ['PTS', 'FT']
-            args = [1, 'Made']
+            index       = _updateisym(line, index, ")")
+            players     = [player, player]
+            stats       = ['PTS', 'FT']
+            args        = [1, 'Made']
         except ValueError:
             # look for [M|m]issed to signal missed shot
-            case = re.findall(r'(M|m)issed', ' '.join(line[index:]))
-            index = _updateisym(line, index, case[0]+'issed')
-            players = [player]
-            stats = ['FT']
-            args = ['Missed']
+            case        = re.findall(r'(M|m)issed', ' '.join(line[index:]))
+            index       = _updateisym(line, index, case[0]+'issed')
+            players     = [player]
+            stats       = ['FT']
+            args        = ['Missed']
     elif phrase=='3pt' or phrase=='shot':
-        index = _updateisym(line, index, ':')
-        players = [player]
-        made = line[index]
+        index           = _updateisym(line, index, ':')
+        players         = [player]
+        made            = line[index]
         if made=='Made':
             players.append(player)
-            stats = ['FG', 'PTS']
-            args = ['Made']
+            stats       = ['FG', 'PTS']
+            args        = ['Made']
             if phrase=='3pt':
                 players.append(player)
                 stats.append('3PT')
                 args.extend([3, 'Made'])
             else:
                 args.append(2)
-            index = _updateisym(line, index, ")")
+            index       = _updateisym(line, index, ")")
         elif made=='Missed':
-            stats = ['FG']
-            args = ['Missed']
+            stats       = ['FG']
+            args        = ['Missed']
             if phrase=='3pt':
                 players.append(player)
                 stats.append('3PT')
@@ -126,66 +127,76 @@ def _handleevent(time, line, args, pstats, teams, active):
         else:
             raise ValueError, 'unexpected next phrase:  ' + made
     elif phrase=='foul':
-        players = [player]
-        stats = ['PF']
-        args = [None]
+        players         = [player]
+        stats           = ['PF']
+        args            = [None]
         if 'Technical' not in line:
-            index = _updateisym(line, index, ")")
+            index       = _updateisym(line, index, ")")
         else:
-            index = len(line) + 1
+            index       = len(line) + 1
     elif phrase=='timeout':
-        index = len(line)+1
+        index           = len(line)+1
     elif phrase=='violation':
-        index = len(line)+1
+        index           = len(line)+1
     ##    if player != 'Team':
     ##    else:
     elif phrase=='rebound':
         if player != 'Team':
-            start = _updateisym(line, index, "(")
-            index = _updateisym(line, start, ")")
-            players = [player]
-            stats = ['RB']
-            args = [' '.join(line[start:index])]
+            start       = _updateisym(line, index, "(")
+            index       = _updateisym(line, start, ")")
+            players     = [player]
+            stats       = ['RB']
+            args        = [' '.join(line[start:index])]
         else:
-            players = [_getteam(line[0])]
-            stats = ['RB']
-            args = [' '.join(line[start:index])]
-            index = len(line) + 1
+            players         = [_getteam(line[0])]
+            stats       = ['RB']
+            args        = [' '.join(line[start:index])]
+            index       = len(line) + 1
             
     elif phrase=='turnover' or phrase=='tunover':
         if player != 'Team':
-            players = [player]
-            stats = ['TO']
-            args = [None]
-            index = _updateisym(line, index, ")")
+            players     = [player]
+            stats       = ['TO']
+            args        = [None]
+            index       = _updateisym(line, index, ")")
         else:
-            players = [_getteam(line[0]), _getteamoth(line[0], teams)]
-            args = ['TO', 'STL']
-            args = [None, None]
-            index = len(line) + 1
+            players     = [_getteam(line[0]), _getteamoth(line[0], teams)]
+            args        = ['TO', 'STL']
+            args        = [None, None]
+            index       = len(line) + 1
     elif phrase=='steal':
-        player2, index = _getplayer(line, index+1, active)
-        players = [player2]
-        stats = ['STL']
-        args = [None]
-        index = _updateisym(line, index, ")")
+        player2, index  = _getplayer(line, index+1, active)
+        players         = [player2]
+        stats           = ['STL']
+        args            = [None]
+        index           = _updateisym(line, index, ")")
     elif phrase=='assist':
-        player2, index = _getplayer(line, index+1, active)
-        players = [player2]
-        stats = ['AST']
-        args = [None]
-        index = _updateisym(line, index, ")")
+        player2, index  = _getplayer(line, index+1, active)
+        players         = [player2]
+        stats           = ['AST']
+        args            = [None]
+        index           = _updateisym(line, index, ")")
     elif phrase=='block':
-        player2, index = _getplayer(line, index+1, active)
-        players = [player2]
-        stats = ['BLK']
-        args = [None]
-        index = _updateisym(line, index, ")")
-
+        player2, index  = _getplayer(line, index+1, active)
+        players         = [player2]
+        stats           = ['BLK']
+        args            = [None]
+        index           = _updateisym(line, index, ")")
+    elif phrase=='substitution':
+        player2, index  = _getplayer(line, index+2, active)
+        players         = oncourt.copy
+        stats           = ['MIN' * len(oncourt)]
+        time_ct         = _timeelapsed(times)
+        times           = times(1)
+        args            = [time_ct * len(oncourt)]
+        index           = len(line)+1
+        oncourt.remove(player)
+        oncourt.append(player2)
+        
     if players and stats and args:
         pstats = _updatestats(players, stats, time, args, pstats)
         
-    return index, pstats
+    return index, pstats, times(0), oncourt
 
     
 def _isplayer(player, active):
@@ -224,6 +235,19 @@ def _makenameIDdict(fhandle):
         print 'Error with finding data field; no name dict created'
     return nameIDdict
 
+def _timeelapsed(times):
+    '''
+    Takes the (previous ref time, time now) tuple and determines
+    the elapsed time between the two points; converts result to
+    date-time format and returns
+    '''
+    t1, t2 = times
+    t1 = [int(k) for k in last_time.split(':')]
+    t2 = [int(k) for k in time.split(':')]
+    dt = datetime.time(0,
+                       int(d1[0]-d2[1]),
+                       int(d1[1]-d2[1]))
+    return dt
 
 def _updateisym(line, index, sym):
     '''
@@ -277,7 +301,7 @@ def _updatestat(time, player, stat, arg, pstats):
     return pstats
         
 
-def processgame(data, pstats, teams, active):
+def processgame(data, pstats, teams, active, starters):
     '''
     Does as advertised; given a set of actions, in the format as output by
     "_getactions()", interates over the set to extract the information from
@@ -287,7 +311,9 @@ def processgame(data, pstats, teams, active):
     '''
     times   = [t for (t,a) in data]
     actions = [a for (t,a) in data]
-    score = _iniscore(teams)    
+    score = _iniscore(teams)
+    oncourt = starters
+    last_time = '00:48:00'
     for k,action in enumerate(actions):
         index = 0
         if action[index].lower()=='start' or action[index].lower()=='end' \
@@ -304,14 +330,14 @@ def processgame(data, pstats, teams, active):
                 _updatescore(action[0], action[1], score)
                 index += 1
             while index < len(action):
-                player, index = _getplayer(action, index, active)
+                player, index = _getplayer(action, index, oncourt)
                 phrase, index = _getphrase(action, index)
                 if phrase and index < len(action):
                     args = (player, phrase.lower(), index)
-                    index, pstats = \
-                           _handleevent(times[k],action,
-                                        args, pstats,
-                                        teams, active)
+                    index, pstats, last_time, oncourt = \
+                           _handleevent((last_time, times[k]),
+                                        action, args, pstats,
+                                        teams, oncourt, active)
                 else:
                     index = len(action)+1
     return pstats, score

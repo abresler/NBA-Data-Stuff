@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, datetime
 
 reqargs = ['pts', 'fg', '3pt', 'ft', 'rb']
 stats   = {'mins':0.0, 'fg':0, 'fga':0, '3pt':0, '3pta':0, 'ft':0,
@@ -7,9 +7,22 @@ stats   = {'mins':0.0, 'fg':0, 'fga':0, '3pt':0, '3pta':0, 'ft':0,
 sks     = ('mins', 'fg', 'fga', '3pt', '3pta', 'ft', 'fta', 'pts',
             'stl', 'ast', 'to', 'blk', 'rbo', 'rbd', 'rb', 'pf')
 
-def getstatlist(self):
+def getstatlist():
     '''Simply returns sks, as defined above'''
     return sks
+
+def calctime(old_time, dt):
+    '''Determines the new total time player has spent on court'''
+    hours = old_time.hours + dt.hours
+    minut = old_time.minutes + dt.minutes
+    secon = old_time.seconds + dt.seconds
+    if secon >= 60:
+        secon -= 60
+        minut += 1
+    if minut >= 60:
+        minut -= 60
+        hours += 1
+    return datetime.time(hours, minut, secon)
 
 class player():
     def __init__(self, name, team, ID):
@@ -21,8 +34,7 @@ class player():
         self._games         = set()     # set of game IDs the player has played in
         self.actionfeed     = dict()    # dict of key->game, value->actions a player has performed
         self.seasonIDs      = list()    # list of ESPN season IDs
-        self.playergameIDs  = list()    # list of single-game player IDs
-        #for stat in statslist:
+        self.playergameIDs  = dict()    # dict with key->gameID, value->playergameID
 
     def _newgame(self, game, playergameID):
         '''
@@ -158,7 +170,7 @@ class player():
                     self.stats['rbd']  = int(args[5][0])
                     self.stats['rb']   = int(args[2][0]) + int(args[5][0])
                 elif stat=='MINS':
-                    self.stats['mins'] += args
+                    self.stats['mins'] = calctime(self.stats['mins'], args)
                 # append line to action feed
                 if new_action:
                     self.actionfeed.append([self.curgame, time, new_action])
@@ -178,6 +190,13 @@ class player():
 
     def games(self):
         return self._games
+
+    def playedgame(self):
+        '''Returns TRUE if player has mins in curgame, FALSE otherwise'''
+        if self.stats['mins'] > 0.0:
+            return True
+        else:
+            return False
 
 '''
 re-write this so that each instance of "game" class corresponds to a single
