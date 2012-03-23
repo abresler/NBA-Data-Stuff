@@ -3,17 +3,6 @@ import NBA_parseplaybyplay as NBA1
 import NBA_playerclass as NBAP
 import NBA_loadandsplit as LAS
 
-def getgames(games):
-    '''
-    Returns the stats from all games contained in self as a dictionary
-    with keys as game ids and values as returns from 'getgame(game id)";
-    '''
-    out = dict()
-    for game in games.keys():
-        out[game] = game.getgame()
-    out['statlist'] = NPAP.getstatlist()
-    return out
-
 print('checking files and loading game files...')
 chdir = os.getcwd()
 fhandlepbp = os.path.join(chdir,'DataFiles', "playbyplay20072008reg20081211.txt")
@@ -22,7 +11,7 @@ fhandlenam = os.path.join(chdir,'DataFiles', "players20072008reg20081211.txt")
 ##fhandlenam = os.path.join(chdir, "players2008playoffs20081211.txt")
 # initialize players dictionary, game dictionary
 pstats = LAS.createplayers(fhandlenam)
-gstats = []
+gstats = LAS.creategames(fhandlepbp, fhandlenam)
 # load play-by-play and find game indicies; pbp is times and actions
 gamedict, pbp = LAS.getpbp(fhandlepbp, ['times', 'actions'])
 # iterate over games and parse play-by-play
@@ -39,15 +28,8 @@ for game in gamedict.keys():
     # parse game
     data = pbp[gamedict[game][0]:gamedict[game][1]]
     pstats, score = NBA1.processgame(data, pstats, teams, active)
-
-    # get players from game that actually played
-    played_game = [p for p in ...
-                   
     # get total game stats from players involved
-    gstats[game] = NBAP.game(game, pstats, score, players)
-    update(game, pstats, active, score)
-
-                             
+    gstats.update(game, pstats, active, score)
     # flush game stats for player involved
     for p in active:
         pstats[p]._flushgame()

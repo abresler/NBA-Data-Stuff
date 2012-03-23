@@ -7,10 +7,6 @@ stats   = {'mins':0.0, 'fg':0, 'fga':0, '3pt':0, '3pta':0, 'ft':0,
 sks     = ('mins', 'fg', 'fga', '3pt', '3pta', 'ft', 'fta', 'pts',
             'stl', 'ast', 'to', 'blk', 'rbo', 'rbd', 'rb', 'pf')
 
-def getstatlist(self):
-    '''Simply returns sks, as defined above'''
-    return sks
-
 class player():
     def __init__(self, name, team, ID):
         self._name          = name      # ESPN name; may need to be "names"
@@ -180,57 +176,62 @@ class player():
         return self._games
 
 '''
-re-write this so that each instance of "game" class corresponds to a single
-game, as with the 'player' class; may want to dump some of the game processing
-stuff into the game class (analogous to the player class...);
+Need to re-write this so that each instance of "game" class corresponds
+to a single game, not a group of games; 
 '''
 class game():
-    def __init__(self, game, pstats, score, players, starters=[]):
-        #self._pbpfile   = os.path.splitext(os.path.basename(fhandlepbp))[0]
-        #self._plafile   = os.path.splitext(os.path.basename(fhandlenam))[0]
-        home, away      = game[-3:], game[-6:-3]
-        self.home       = home
-        self.away       = away
-        self.score      = {home:score[home], away:score[away]}
-        self.stats      = [pstats[p].getcur(game) for p in players]
-        self.starters   = starters
-        self.players    = players
+    def __init__(self, fhandlepbp, fhandlenam):
+        self._pbpfile = os.path.splitext(os.path.basename(fhandlepbp))[0]
+        self._plafile = os.path.splitext(os.path.basename(fhandlenam))[0]
+        self._home  = dict()
+        self._away  = dict()
+        self._teams = dict()
+        self._score = dict()
+        self._stats = dict()
+        self.games  = []
 
-    def showgame(self):
+    def _addgame(self, game, score):
+        '''
+        Updates home, away, teams, score for new game "game" with score
+        "score";
+        '''
+        self.games.append(game)
+        home, away = game[-3:], game[-6:-3]
+        self._home[game]    = home
+        self._away[game]    = away
+        self._teams[game]   = (home, away)
+        self._score[game]   = {home:score[home], away:score[away]}
+
+    def _addstats(self, game, pstats, active):
+        '''
+        Updates the player stats for game "game"; just creates a list
+        of dictionaries output from the player class for the current
+        game; note that the player class returns a ValueError if a
+        player name referenced in "active" dose not have their current
+        game set as "game";
+        ''' 
+        self._stats[game] = [pstats[p].getcur(game) for p in active]
+            
+    def update(self, game, pstats, active, score):
+        '''
+        Adds the current game stats to self under heading of "game"
+        '''
+        self._addgame(game, score)
+        self._addstats(game, pstats, active)
+
+    def showgame(self, game):
         '''
         pprint display the stats from game "game"
         '''
-        temp = getgame(self)
+        temp = getgame(self, game)
         
-    def getscore(self):
-        '''Returns the final score for the game "game"'''
-        return self.score
+    def getscore(self, game):
+        return self._score[game]
     
-    def getteams(self):
-        '''Returns the teams involved for the game "game"'''
-        return (self.home, self.away)
-    
-    def getstarters(self):
-        '''
-        Returns the list of starts for the game, self; used primarely in
-        setting up player game IDs;
-        '''
-        return self.starters
+    def getteams(self, game):
+        return self._teams[game]
 
-    def getplayers(self):
-        '''
-        Returns the list of all players (via ID?) that played in game 'self'
-        '''
-        return self.players
-
-    def setactdict(self, ss):
-        '''
-        Sets self's reference to the actions in the global acion dictionary
-        table;
-        '''
-        self.actiondict = ss
-
-    def getgame(self):
+    def getgame(self, game):
         '''
         Return a usable format of the stats from game; specifically, return
         a dictionary with player names as keys and stats as dicts, key
@@ -238,10 +239,10 @@ class game():
         scores as values, and keys str(3-letter team abv. + Team) with
         the list of players on that team as values;
         '''
-        out     = self.getscore()
-        home, away = self.getteams()
+        out     = self.getscore(game)
+        home, away = self.getteams(game)
         hplay, aplay = [], []
-        for p in self.stats:
+        for p in self._stats[game]:
             if p['Team']==home:
                 hplay.append(p['Name'])
             elif p['Team']==away:
@@ -257,5 +258,28 @@ class game():
         out[away+'Team'] = aplay
         return out
 
+    def getgames(self):
+        '''
+        Returns the stats from all games contained in self as a dictionary
+        with keys as game ids and values as returns from 'getgame(game id)";
+        '''
+        out = dict()
+        for game in self.games:
+            out[game] = self.getgame(game)
+        out['statlist'] = sks
+        return out
 
-    
+    def starters(self):
+        '''
+        Returns the list of starts for the game, self; used primarely in
+        setting up player game IDs;
+        '''
+
+        return
+
+    def players(self):
+        '''
+        Returns the list of all players (via ID?) that played in game 'self'
+        '''
+
+        return

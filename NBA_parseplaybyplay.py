@@ -21,8 +21,6 @@ from NBA_playerclass import game
 
 
 
-
-
 def _getphrase(line, index):
     '''Finds the next keyword phrase in line, or eol'''
     phrases = ['free', '3pt', 'shot', 'foul', 'timeout', 'violation',
@@ -75,7 +73,6 @@ def _getteamoth(team, teams):
     team = _getteam(team)
     team = list(set(teams).difference(set([team])))[0]
     return team
-
 
 
 def _handleevent(time, line, args, pstats, teams, active):
