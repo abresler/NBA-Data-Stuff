@@ -24,6 +24,7 @@ def creategames(fhandlepbp, fhandlenam):
     '''
 
     '''
+    gamedata = loadfile(
     gamestats = NBAP.game(fhandlepbp, fhandlenam)
     return gamestats
 

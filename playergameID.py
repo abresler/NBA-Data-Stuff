@@ -1,8 +1,5 @@
 # Get last player game id used, MySQL call
-cursor = conn.cursor()
-cursor.execute("SELECT Dummy FROM PlayerGame ORDER BY Dummy DESC LIMIT 1")
-last_playerID = cursor.fetchall()[0][0]
-cursor.close()
+last_val = getlastID(conn, "PlayerGame")
 
 for game in gamelist:
     starters = game.starters

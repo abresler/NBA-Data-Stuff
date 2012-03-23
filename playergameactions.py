@@ -1,8 +1,5 @@
 # Get last player action ID from, SQL table
-cursor = conn.cursor()
-cursor.execute("SELECT Dummy FROM PlayerActions ORDER BY Dummy DESC LIMIT 1")
-last_val = cursor.fetchall()[0][0]
-cursor.close()
+last_val = getlastID(conn, "PlayerActions")
 
 for game in gstats.games:
     g_start = last_val+1

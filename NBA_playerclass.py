@@ -33,7 +33,7 @@ class player():
         self._gamestats     = dict()    # dict of dict, keys are gameIDs, values are stats for that game
         self._games         = set()     # set of game IDs the player has played in
         self.actionfeed     = dict()    # dict of key->game, value->actions a player has performed
-        self.seasonIDs      = list()    # list of ESPN season IDs
+        self.ESPNIDs        = dict()    # list of ESPN season IDs
         self.playergameIDs  = dict()    # dict with key->gameID, value->playergameID
 
     def _newgame(self, game, playergameID):
