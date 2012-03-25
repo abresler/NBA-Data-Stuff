@@ -6,6 +6,14 @@ available online as well;
 ###########################################################################################
 Use:
 
+24/03/12 Update:
+
+Just added some files to pull pages from ESPN corresponding to games' play-by-play data and
+box score data (mainly to get the starters, though can also use to confirm successful 
+extraction of play-by-play data by comparing player stats).  Can either provide the actual
+ESPN game ids, or can just provide a date (YYYYMMDD), and the code grabs the pages for 
+games that occured on that date; more to come;
+
 20/03/12 Update:
 Starting to make changes for interfacing w/ a local MySQL database.  Also, going to extend
 the "player" class to account for "player actions", i.e. time-stamped game actions.  Players
@@ -15,13 +23,18 @@ ID assignment for players; I'm sure they have unique codings, and it would be re
 to use these, for obvious reasons).  This, I think, will reduce the effort required for 
 more in-depth stat and performance analysis.  The database for the NBA data will consist 
 of 5 main tables initially, with other possible additions:
-a)
+a) Complete copy of as-is ESPN play-by-play lines with dummy index
 
-b)
+b) Modified play-by-play data for each game-player with dummy index so that given a player-game
+id, one can easily access the corresponding set of actions for that individual; also set up such
+that one can easily obtain set of all actions for a game from the table; entries are parsed such
+that events can easily be separated by type, etc., with no processing, only queries;
 
-c)
+c) A [player-game id, game-id, actions reference, player-global-id, player-game-stats] table to 
+relate each player-game-id to the global player, the corresponding in-game actions, the 
+corresponding game, and get a game summary of performance
 
-d)
+d) A [player-global-id, stats-life, player-game-id-list] table
 
 e)
 
@@ -59,3 +72,7 @@ http://www.sloansportsconference.com/?page_id=462
 82Games.com
 http://82games.com/index.htm
 http://www.82games.com/comm30.htm
+
+These seem useful too:
+http://www.basketball-reference.com/
+http://www.sportscity.com/
