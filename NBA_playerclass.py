@@ -204,7 +204,7 @@ game, as with the 'player' class; may want to dump some of the game processing
 stuff into the game class (analogous to the player class...);
 '''
 class game():
-    def __init__(self, game, pstats, score, players, starters=[]):
+    def __init__(self, game, pbp, pstats, score, players, starters):
         #self._pbpfile   = os.path.splitext(os.path.basename(fhandlepbp))[0]
         #self._plafile   = os.path.splitext(os.path.basename(fhandlenam))[0]
         home, away      = game[-3:], game[-6:-3]
@@ -214,6 +214,7 @@ class game():
         self.stats      = [pstats[p].getcur(game) for p in players]
         self.starters   = starters
         self.players    = players
+        self.pbp        = pbp
 
     def showgame(self):
         '''

@@ -94,7 +94,8 @@ def getidswebs(date, cat='NBA'):
 def getargs():
     '''
     Grabs args from terminal run; as of now, just a file containing
-    the ESPN game ids desired, and maybe an output file name;
+    the ESPN game ids desired, and maybe an output file name; change
+    to make argstupple an "argsdict";
     '''
     if len(sys.argv[1:]) > max_args: print('disregarding extra args')
     try:
@@ -108,10 +109,26 @@ def getargs():
         except:
             raise ValueError, 'no game id or game id file provided'
 
+def picklehandle(data, argstuple):
+    '''Pickle data, if dicts are not empty'''
+    pbp_store = data[0]
+    box_store = data[1]
+    print "Pickling files..."
+    if pbp_store:
+        fname = argstuple[1] + "_PBP.pkl" \
+                if argstuple[1] else "temp01_PBP.pkl"
+        fname = os.path.join(default_path, fname)
+        pickledata(fname, pbp_store)
+    if box_store:
+        fname = argstuple[1] + "_BOX.pkl" \
+                if argstuple[1] else "temp01_BOX.pkl"
+        fname = os.path.join(default_path, fname)
+        pickledata(fname, box_store)
+
 def pickledata(fname, data):
     '''For easy pickling'''
     with open(fname, 'wb') as dbfile:       # use binary mode files in 3.X
-        pickle.dump(data, dbfile)               # data is bytes, not str
+        pickle.dump(data, dbfile)           # data is bytes, not str
 
 def unpickledata(fname):
     '''For easy un-pickling'''
@@ -127,23 +144,19 @@ def runmain(gameids, argstuple):
         print('Grabbing game ' + str(gameid) + '...')
         pbp_store[gameid] = getpbp(gameid)
         box_store[gameid] = getbox(gameid)
-    '''Pickle data, if dicts are not empty'''
-    print "Pickling files..."
-    if pbp_store:
-        fname = argstuple[1] + "_PBP.pkl" \
-                if argstuple[1] else "temp01_PBP.pkl"
-        fname = os.path.join(default_path, fname)
-        pickledata(fname, pbp_store)
-    if box_store:
-        fname = argstuple[1] + "_BOX.pkl" \
-                if argstuple[1] else "temp01_BOX.pkl"
-        fname = os.path.join(default_path, fname)
-        pickledata(fname, box_store)
+    if argstuple['output']=='raw':
+        '''Pickle raw data'''
+        picklehandle((pbp_store,box_store), argstuple)
+    elif argstuple['output']=='processed':
+        '''Extract info from games'''
+        
     return 1
 
 def verifydate(date):
     '''Checks to make sure provided date is valid format, in past or now'''
     now = datetime.datetime.now()
+    if len(date) != 8:
+        print 'WARNING: non-valid date or date in invalid format'
     try:
         if int(date[:4])  <= now.year and\
            int(date[4:6]) <= now.month and\
@@ -152,7 +165,7 @@ def verifydate(date):
         else:
             return False
     except ValueError:
-        raise ValueError, 'date in invalid format'
+        print 'non-valid date or date in invalid format'
         
         
 
@@ -175,12 +188,10 @@ if __name__=='__main__':
                 msg = 'game id file path invalid OR non-int game id provided'
                 raise ValueError, msg
         if not gameids:
-            msg = 'No valid game ids provided.  Terminating program.'
+            msg = 'No valid game ids provided. Terminating program.'
             raise ValueError, msg
         else:
             '''If everything is OK up to this point, run the main code'''
             if runmain(gameids, argstuple):
                 print "Process complete."
-            
-            
-        
+                
