@@ -1,27 +1,26 @@
+'''
+Parsing modules specifically for handling ESPN sports pages (tested only on
+NBA data thus far);
+'''
 import sys, os, re
-import urllib2
 from BeautifulSoup import BeautifulSoup as BS
+import genBSandURLtools
 
+null_value      = '&nbsp;'
 
 def getESPNpbp(data_in, mode='url'):
-    '''url is a play-by-play url obtained from score-summary ESPN page'''
-    if mode=='url':
-        try:
-            raw_pbp = urllib2.urlopen(data_in).read()
-        except:
-            raise ValueError, 'Something bad happened with the url...'
-    elif mode=='page':
-        raw_pbp     = data_in
-    '''The BS way...'''
-    soup_pbp        = BS(raw_pbp)       # want to keep this for later, maybe
-    tables          = page_soup.findAll('table')
-    pbp             = [t for t in tables if t.text.find('TIME')]
+    '''
+    url is a play-by-play url obtained from score-summary ESPN page;
+    use BeautifulSoup to parse apart data_in; all relevant data found
+    in 'table' HTML structures, hence we grab those;
+    '''
+    tables          = genBSandURLtools.getDataType(data_in, 'table', mode)
+    pbp             = [t for t in tables if t.text.find('TIME') > -1]
     if pbp:
-        pbp         = pbp[0].findall('tr')
+        pbp         = pbp[0].findAll('tr')
     else:
         raise AttributeError, "Houston, there is a fucking problem"
     '''Use BS to get the headers (e.g., home and away team for game)'''
-    null_value      = '&nbsp;'
     header          = [str(h.text) for h in pbp[1].findAll('th')] # time, away, score, home
     content         = []
     for line in pbp[2:]:
@@ -30,17 +29,12 @@ def getESPNpbp(data_in, mode='url'):
     return header, content
 
 def getESPNbox(data_in, mode='url'):
-    '''url is a box score url obtained from score-summary ESPN page'''
-     if mode=='url':
-        try:
-            raw_box = urllib2.urlopen(data_in).read()
-        except:
-            raise ValueError, 'Something bad happened with the url...'
-    elif mode=='page':
-        raw_box     = data_in
-    '''The BS way...'''
-    soup_box        = BS(raw_box)
-    tables          = soup_box.findAll('table')
+    '''
+    url is a box score url obtained from score-summary ESPN page;
+    use BeautifulSoup to parse apart data_in; all relevant data found
+    in 'table' HTML structures, hence we grab those;
+    '''
+    tables          = genBSandURLtools.getDataType(data_in, 'table', mode)
     summary         = [t for t in tables if t.text.find('STARTERS') > -1]
     if summary:
         summary     = summary[0].findAll('tr')
@@ -50,14 +44,26 @@ def getESPNbox(data_in, mode='url'):
     content         = []
     for line in summary:
         '''
-        "details" are headers, trams stuff;
+        "details" are headers, teams stuff;
         "content" is actual player data
-        Gets Teams, Headers, splits; fields should be:
-        Should be:
-        ['STARTERS', 'MIN', 'FGM-A', '3PM-A', 'FTM-A', 'OREB',
-        'DREB', 'REB', 'AST', 'STL', 'BLK', 'TO', 'PF', '+/-', 'PTS']
         '''
         details.append([str(h.text) for h in line.findAll('th')])
         content.append([str(h.text) for h in line.findAll('td')])
-    return details, content
+    playerlink_dict = getESPNplayerlinks(summary)
+    return details, content, playerlink_dict
+
+def getESPNplayerlinks(summary):
+    '''
+    Gets the ESPN page urls for players in the game from the box score page;
+    keys are the full names of players used in box score, and values are
+    the urls;
+    '''
+    playerlink_dict = dict()
+    for line in summary:
+	temp = line.findAll('a')
+	if temp:
+            temp    = temp[0]
+            if str(temp.get('href')):
+		playerlink_dict[str(temp.text)] = str(temp.get('href'))
+    return playerlink_dict
     

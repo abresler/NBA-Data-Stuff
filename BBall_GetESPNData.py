@@ -17,6 +17,7 @@ import pickle
 import datetime
 import urllib2
 from BeautifulSoup import BeautifulSoup as Soup
+import parseESPN
 
 '''
 nba_root    = "http://scores.espn.go.com/nba/scoreboard?date="
@@ -34,26 +35,33 @@ default_path    = "/Users/sinn/NBA-Data-Stuff/DataFiles"
 root_dict       = {'NBA':nba_root,
                    'NCAM':ncaa_root
                    }
+null_value      = '&nbsp;'
 max_args        = 2
 
-def getpbp(gameid):
+def getpbp(gameid, mode=2):
     '''Given an ESPN game ID, grabs the raw play-by-play feed page'''
     try:
         url = nba_pbp + str(gameid) + "&period=0"
-        raw_pbp = urllib2.urlopen(url).read()
-        return raw_pbp
-    except:
+        if mode==1:
+            pbp = urllib2.urlopen(url).read()
+        elif mode==2:
+            pbp = parseESPN.getESPNpbp(url)
+        return pbp
+    except ValueError:
         # need some stuff to spit out error info...
         print('Failed to retreive play-by-play for game ' + str(gameid))
         return list()
 
-def getbox(gameid):
+def getbox(gameid, mode=2):
     '''Given an ESPN game ID, grabs the raw box score page'''
     try:
         url = nba_box + str(gameid)
-        raw_box = urllib2.urlopen(url).read()
-        return raw_box
-    except:
+        if mode==1:
+            box = urllib2.urlopen(url).read()
+        elif mode==2:
+            box = parseESPN.getESPNbox(url)
+        return box
+    except ValueError:
         # need some stuff to spit out error info...
         print('Failed to retreive box score for game ' + str(gameid))
         return list()
