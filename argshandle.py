@@ -1,22 +1,48 @@
 import sys, os
 
-max_args = 2
-def getargs():
+def getargs(argslist=[], minargtup=[]):
     '''
-    Grabs args from terminal run; as of now, just a file containing
-    the ESPN game ids desired, and maybe an output file name;
+    Grabs args from terminal run; looks for args with names in argslist;
+    requires args with names in at least one minargtup, and raises error
+    if at least one set of minimal args is not included; returns found
+    args as a dictionary; if names provided, looks for "-name" formate;
+    if this not found, assumes args are given in order of argslist;
     '''
-    if len(sys.argv[1:]) > max_args: print('disregarding extra args')
-    try:
-        gameid_file, output_name = sys.argv[1:3]
-        return gameid_file, output_name
-    except:
-        '''Assume no output file name, try to get game id file'''
-        try:
-            gameid_file = sys.argv[1]
-            return gameid_file,
-        except:
-            raise ValueError, 'no game id or game id file provided'
+    given_args  = sys.argv[1:]
+    args_out    = dict()
+    if given_args[0].startswith('-'):
+        '''Args named, denoted w/ "-"'''
+        start = 0
+        args = []
+        while start < len(given_args):
+            end = start + find_next(given_args[start+1:])
+            args.append(given_args[start:end+1])
+            start = end + 1
+        '''clean'''
+        for arg in args:
+            arg[0] = arg[0].strip('-')
+            if arg[0] in argslist:
+                start = arg.index('=')
+                args_out[arg[0]] = ' '.join(arg[start+1:])
+            else:
+                raise ValueError, 'invalid argument, %s, supplied' % (arg[0])
+    else:
+        '''non-named args; assume order of arglist'''
+        for i,arg in enumerate(args):
+            if i < len(argslist):
+                args_out[arglist[i]] = arg
+            else:
+                print "Ignoring extra arg %s" % (arg)
+    return args_out
+
+def find_next(args):
+    if not args:
+        return 0
+    elif args[0].startswith('-'):
+        return 0
+    else:
+        return 1 + find_next(args[1:])
+    
 
 if __name__=='__main__':
     """

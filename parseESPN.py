@@ -26,7 +26,7 @@ def getESPNpbp(data_in, mode='url'):
     for line in pbp[2:]:
         temp        = line.findAll('td')
         content.append([str(e.text) for e in temp])
-    return header, content
+    return {'head':header, 'content':content}
 
 def getESPNbox(data_in, mode='url'):
     '''
@@ -50,7 +50,8 @@ def getESPNbox(data_in, mode='url'):
         details.append([str(h.text) for h in line.findAll('th')])
         content.append([str(h.text) for h in line.findAll('td')])
     playerlink_dict = getESPNplayerlinks(summary)
-    return details, content, playerlink_dict
+    return {'details':details, 'content':content,
+            'playerlinks':playerlink_dict}
 
 def getESPNplayerlinks(summary):
     '''

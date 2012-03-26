@@ -18,6 +18,7 @@ import datetime
 import urllib2
 from BeautifulSoup import BeautifulSoup as Soup
 import parseESPN
+from argshandle import getargs
 
 '''
 nba_root    = "http://scores.espn.go.com/nba/scoreboard?date="
@@ -39,7 +40,10 @@ null_value      = '&nbsp;'
 max_args        = 2
 
 def getpbp(gameid, mode=2):
-    '''Given an ESPN game ID, grabs the raw play-by-play feed page'''
+    '''
+    Given an ESPN game ID grabs the raw play-by-play feed page if mode==1;
+    if mode==2, processes the page with parseESPN.getESPNpbp module;
+    '''
     try:
         url = nba_pbp + str(gameid) + "&period=0"
         if mode==1:
@@ -53,7 +57,10 @@ def getpbp(gameid, mode=2):
         return list()
 
 def getbox(gameid, mode=2):
-    '''Given an ESPN game ID, grabs the raw box score page'''
+    '''
+    Given an ESPN game ID grabs the raw bow score feed page if mode==1;
+    if mode==2, processes the page with parseESPN.getESPNbox module;
+    '''
     try:
         url = nba_box + str(gameid)
         if mode==1:
@@ -90,16 +97,17 @@ def getidswebs(date, cat='NBA'):
             raw_day_summary = urllib2.urlopen(root_dict[cat]+date).read()
         except KeyError:
             print 'Non-valid category, %s, provided; using "NBA"' % cat
-            try: raw_day_summary = urllib2.urlopen(root_dict['NBA']+date).read()
-            except: pass
-        except:
-            # again, need to get error type and return, handle, etc...
-            pass
+            try:
+                raw_day_summary = urllib2.urlopen(root_dict['NBA']+date).read()
+            except urllib2.URLError:
+                print 'Failed to fetch ' + root_dict['NBA']+date
+        except urllib2.URLError:
+            print 'Failed to fetch ' + root_dict[cat]+date
         finally:
             gameids = key_phrase.findall(raw_day_summary)
             return gameids
                 
-def getargs():
+def handargs():
     '''
     Grabs args from terminal run; as of now, just a file containing
     the ESPN game ids desired, and maybe an output file name; change
@@ -117,19 +125,17 @@ def getargs():
         except:
             raise ValueError, 'no game id or game id file provided'
 
-def picklehandle(data, argstuple):
+def picklehandle(data, argdict):
     '''Pickle data, if dicts are not empty'''
-    pbp_store = data[0]
-    box_store = data[1]
+    pbp_store = data['pbp']
+    box_store = data['box']
     print "Pickling files..."
     if pbp_store:
-        fname = argstuple[1] + "_PBP.pkl" \
-                if argstuple[1] else "temp01_PBP.pkl"
+        fname = argdict['outname'] + "_PBP.pkl"
         fname = os.path.join(default_path, fname)
         pickledata(fname, pbp_store)
     if box_store:
-        fname = argstuple[1] + "_BOX.pkl" \
-                if argstuple[1] else "temp01_BOX.pkl"
+        fname = argdict['outname'] + "_BOX.pkl"
         fname = os.path.join(default_path, fname)
         pickledata(fname, box_store)
 
@@ -144,7 +150,7 @@ def unpickledata(fname):
         data = pickle.load(dbfile)
         return data
     
-def runmain(gameids, argstuple):
+def runmain(gameids, argdict):
     pbp_store = dict()
     box_store = dict()
     '''Grab data from pages'''
@@ -152,11 +158,12 @@ def runmain(gameids, argstuple):
         print('Grabbing game ' + str(gameid) + '...')
         pbp_store[gameid] = getpbp(gameid)
         box_store[gameid] = getbox(gameid)
-    if argstuple['output']=='raw':
-        '''Pickle raw data'''
-        picklehandle((pbp_store,box_store), argstuple)
-    elif argstuple['output']=='processed':
-        '''Extract info from games'''
+    picklehandle({'pbp':pbp_store, 'box':box_store}, argdict)
+##    if argdict['outform']=='raw':
+##        '''Pickle raw data'''
+##        picklehandle({'pbp':pbp_store, 'box':box_store}, argdict)
+##    elif argdict['outform']=='processed':
+##        '''Extract info from games'''
         
     return 1
 
@@ -182,24 +189,22 @@ if __name__=='__main__':
     Default run from terminal; grab the text file with a list of game
     id's and get the raw pbp and box score pages for each; pickle results
     """
-    argstuple = getargs()
-    if argstuple:
-        if os.path.isfile(argstuple[0]):
-            gameids = getidsfile(argstuple[0])
-        elif os.path.isfile(os.path.join(default_path, argstuple[0])):
-            gameids = getidsfile(os.path.join(default_path, argstuple[0]))
-        else:
-            try:
-                '''Assume 1-st arg is a date; try to grab main page'''
-                gameids = getidswebs(argstuple[0])
-            except ValueError:
-                msg = 'game id file path invalid OR non-int game id provided'
-                raise ValueError, msg
+    argdict = getargs(argslist=['file', 'date', 'outname', 'outform'])
+    if not argdict.has_key('outform'): argdict['outform'] = 'processed'
+    if not argdict.has_key('outname'): argdict['outname'] = "temp01_PBP.pkl"
+    if argdict:
+        if argdict.has_key('file'): 
+            if os.path.isfile(argdict['file']):
+                gameids = getidsfile(argdict['file'])
+            elif os.path.isfile(os.path.join(default_path, argdict['file'])):
+                gameids = getidsfile(os.path.join(default_path, argdict['file']))
+        elif argdict.has_key('date'):
+            gameids = getidswebs(argdict['date'])
         if not gameids:
             msg = 'No valid game ids provided. Terminating program.'
             raise ValueError, msg
         else:
             '''If everything is OK up to this point, run the main code'''
-            if runmain(gameids, argstuple):
+            if runmain(gameids, argdict):
                 print "Process complete."
                 
