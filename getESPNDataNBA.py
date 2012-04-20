@@ -12,25 +12,30 @@ with the ESPN game ids as keys and the raw pages as values; if a date is used
 as input, the program attempts to locate that page, and extracts the
 ESPN game ids from the scores summary page for that date;
 """
-import sys, os, re
-import pickle
+import sys, os
+import re
 import datetime
 import urllib2
+
 from BeautifulSoup import BeautifulSoup as Soup
+
 import parseESPN
 from argshandle import getargs
+from picklingIsEasy import picklehandle
 
 '''
-nba_root    = "http://scores.espn.go.com/nba/scoreboard?date="
-nba_pbp_all = "http://scores.espn.go.com/nba/playbyplay?gameId="+ gameID + "&period=0"
+nba_root    = "http://scores.espn.go.com/nba/scoreboard?date=" + date
+nba_pbp_all = "http://scores.espn.go.com/nba/playbyplay?gameId=" + gameID + "&period=0"
 nba_box     = "http://scores.espn.go.com/nba/boxscore?gameId=" + gameID
-ncaa_root   = "http://scores.espn.go.com/ncb/scoreboard?date="
+ncaa_root   = "http://scores.espn.go.com/ncb/scoreboard?date=" + date
 '''
 '''Links and paths'''
 nba_root        = "http://scores.espn.go.com/nba/scoreboard?date="
 ncaa_root       = "http://scores.espn.go.com/ncb/scoreboard?date="
+nba_ext         = "http://scores.espn.go.com/nba/recap?gameId="
 nba_box         = "http://scores.espn.go.com/nba/boxscore?gameId="
 nba_pbp         = "http://scores.espn.go.com/nba/playbyplay?gameId="
+nba_shots       = "http://scores.espn.go.com/nba/shotchart?gameId="
 default_path    = "/Users/sinn/NBA-Data-Stuff/DataFiles"
 
 root_dict       = {'NBA':nba_root,
@@ -39,40 +44,65 @@ root_dict       = {'NBA':nba_root,
 null_value      = '&nbsp;'
 max_args        = 2
 
-def getpbp(gameid, mode=2):
+def runmain(gameids, argdict):
+    pbp_store = dict()
+    box_store = dict()
+    ext_store = dict()
+    '''Grab data from pages'''
+    for gameid in gameids:
+        print('Grabbing game ' + str(gameid) + '...')
+        pbp_store[gameid] = getpbp(gameid)
+        box_store[gameid] = getbox(gameid)
+        ext_store[gameid] = getext(gameid)
+    picklehandle({'pbp':pbp_store,
+                  'box':box_store,
+                  'ext':ext_store},
+                 argdict)
+    return 1
+
+def getext(gameID):
+    '''
+    Really this is the recap page, but also grabs some other info like game
+    location and time, etc; also story analysis of game;
+    '''
+    try:
+        url = nba_ext + str(gameid)
+        ext = parseESPN.processESPNpage(url, 'extta')
+        return ext
+    except ValueError:
+        # need some stuff to spit out error info...
+        print('Failed to retreive recap for game ' + str(gameid))
+        return list()
+
+def getpbp(gameid):
     '''
     Given an ESPN game ID grabs the raw play-by-play feed page if mode==1;
     if mode==2, processes the page with parseESPN.getESPNpbp module;
     '''
     try:
         url = nba_pbp + str(gameid) + "&period=0"
-        if mode==1:
-            pbp = urllib2.urlopen(url).read()
-        elif mode==2:
-            pbp = parseESPN.getESPNpbp(url)
+        pbp = parseESPN.processESPNpage(url, 'pbp')
         return pbp
     except ValueError:
         # need some stuff to spit out error info...
         print('Failed to retreive play-by-play for game ' + str(gameid))
         return list()
 
-def getbox(gameid, mode=2):
+def getbox(gameid):
     '''
     Given an ESPN game ID grabs the raw bow score feed page if mode==1;
     if mode==2, processes the page with parseESPN.getESPNbox module;
     '''
     try:
         url = nba_box + str(gameid)
-        if mode==1:
-            box = urllib2.urlopen(url).read()
-        elif mode==2:
-            box = parseESPN.getESPNbox(url)
+        box = parseESPN.processESPNpage(url, 'box')
         return box
     except ValueError:
         # need some stuff to spit out error info...
         print('Failed to retreive box score for game ' + str(gameid))
         return list()
 
+'''These two modules handle obtaining the game ids we want to grabs pages for'''
 def getidsfile(fhandle):
     with open(fhandle, 'r') as f1:
         raw = f1.read()
@@ -106,66 +136,7 @@ def getidswebs(date, cat='NBA'):
         finally:
             gameids = key_phrase.findall(raw_day_summary)
             return gameids
-                
-def handargs():
-    '''
-    Grabs args from terminal run; as of now, just a file containing
-    the ESPN game ids desired, and maybe an output file name; change
-    to make argstupple an "argsdict";
-    '''
-    if len(sys.argv[1:]) > max_args: print('disregarding extra args')
-    try:
-        gameid_file, output_name = sys.argv[1:3]
-        return gameid_file, output_name
-    except:
-        '''Assume no output file name, try to get game id file'''
-        try:
-            gameid_file = sys.argv[1]
-            return gameid_file, str()
-        except:
-            raise ValueError, 'no game id or game id file provided'
-
-def picklehandle(data, argdict):
-    '''Pickle data, if dicts are not empty'''
-    pbp_store = data['pbp']
-    box_store = data['box']
-    print "Pickling files..."
-    if pbp_store:
-        fname = argdict['outname'] + "_PBP.pkl"
-        fname = os.path.join(default_path, fname)
-        pickledata(fname, pbp_store)
-    if box_store:
-        fname = argdict['outname'] + "_BOX.pkl"
-        fname = os.path.join(default_path, fname)
-        pickledata(fname, box_store)
-
-def pickledata(fname, data):
-    '''For easy pickling'''
-    with open(fname, 'wb') as dbfile:       # use binary mode files in 3.X
-        pickle.dump(data, dbfile)           # data is bytes, not str
-
-def unpickledata(fname):
-    '''For easy un-pickling'''
-    with open(fname, 'rb') as dbfile:
-        data = pickle.load(dbfile)
-        return data
-    
-def runmain(gameids, argdict):
-    pbp_store = dict()
-    box_store = dict()
-    '''Grab data from pages'''
-    for gameid in gameids:
-        print('Grabbing game ' + str(gameid) + '...')
-        pbp_store[gameid] = getpbp(gameid)
-        box_store[gameid] = getbox(gameid)
-    picklehandle({'pbp':pbp_store, 'box':box_store}, argdict)
-##    if argdict['outform']=='raw':
-##        '''Pickle raw data'''
-##        picklehandle({'pbp':pbp_store, 'box':box_store}, argdict)
-##    elif argdict['outform']=='processed':
-##        '''Extract info from games'''
-        
-    return 1
+''''''
 
 def verifydate(date):
     '''Checks to make sure provided date is valid format, in past or now'''
